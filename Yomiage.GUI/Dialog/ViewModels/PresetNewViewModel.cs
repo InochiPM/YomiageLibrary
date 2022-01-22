@@ -15,7 +15,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class PresetNewViewModel : DialogViewModelBase
     {
-        public override string Title => "新規ボイスプリセット";
+        public override string Title => "New Voice Preset";
 
         public ReadOnlyReactiveCollection<VoicePreset> Presets { get; }
         public ReactivePropertySlim<VoicePreset> SelectedPreset { get; }
@@ -30,7 +30,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 
             Presets = voicePresetService.StandardPreset.ToReadOnlyReactiveCollection().AddTo(Disposables);
             SelectedPreset = new ReactivePropertySlim<VoicePreset>().AddTo(Disposables);
-            PresetName = new ReactivePropertySlim<string>("新規プリセット").AddTo(Disposables);
+            PresetName = new ReactivePropertySlim<string>("New Preset").AddTo(Disposables);
             isSelected = new ReactivePropertySlim<bool>(false).AddTo(Disposables);
             OkCommand = isSelected.ToReactiveCommand().WithSubscribe(() =>
             {
@@ -43,7 +43,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
             {
                 if(preset != null)
                 {
-                    PresetName.Value = preset.Name + " - 新規";
+                    PresetName.Value = preset.Name + " - New";
                 }
                 isSelected.Value = preset != null;
             }).AddTo(Disposables);

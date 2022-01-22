@@ -13,11 +13,11 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class PauseCharacterViewModel : DialogViewModelBase
     {
-        public override string Title => "記号ポーズ";
+        public override string Title => "Pause";
         public ReactiveProperty<string> PauseCharacter { get; } = new ReactiveProperty<string>().SetValidateNotifyError(x =>
         {
-            if (string.IsNullOrEmpty(x)) { return "入力してください。"; }
-            return Regex.IsMatch(x, "^[!-~ ]*$") ? null : "半角英数字、半角記号を入力してください。";
+            if (string.IsNullOrEmpty(x)) { return "Please input."; }
+            return Regex.IsMatch(x, "^[!-~ ]*$") ? null : "Please enter single-byte alphanumeric characters\nand single-byte symbols.";
         });
         public ReactiveProperty<int> PauseSpan_ms { get; } = new ReactiveProperty<int>(80);
 

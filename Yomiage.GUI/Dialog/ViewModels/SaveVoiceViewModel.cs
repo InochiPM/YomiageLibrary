@@ -18,7 +18,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 
         public SettingService SettingService { get; }
 
-        public override string Title => "音声保存";
+        public override string Title => "Save Voice";
 
         protected override void OkAction()
         {

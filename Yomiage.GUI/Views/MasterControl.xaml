@@ -44,7 +44,7 @@
                         VerticalAlignment="Center"
                         BorderBrush="DimGray"
                         BorderThickness="0,0,0,1">
-                        音声効果
+                        Effect
                     </Label>
 
                     <Button
@@ -140,7 +140,7 @@
                         VerticalAlignment="Center"
                         BorderBrush="DimGray"
                         BorderThickness="0,0,0,1">
-                        ポーズの長さ
+                        Pause Length
                     </Label>
 
                     <Button
@@ -220,7 +220,7 @@
                 VerticalAlignment="Center"
                 BorderBrush="DimGray"
                 BorderThickness="0,0,0,1">
-                記号ポーズ
+                Symbols
             </Label>
 
             <ListView
@@ -234,11 +234,11 @@
                         <GridViewColumn
                             Width="100"
                             DisplayMemberBinding="{Binding key}"
-                            Header="記号" />
+                            Header="Symbol" />
                         <GridViewColumn
                             Width="150"
                             DisplayMemberBinding="{Binding span_ms}"
-                            Header="ポーズの長さ [ﾐﾘ秒]" />
+                            Header="Length" />
                     </GridView>
                 </ListView.View>
             </ListView>
@@ -250,7 +250,7 @@
                     Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularNews" />
-                        <TextBlock VerticalAlignment="Bottom">新規</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">New</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button
@@ -259,7 +259,7 @@
                     Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularEditAlt" />
-                        <TextBlock VerticalAlignment="Bottom">変更</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Edit</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button
@@ -268,7 +268,7 @@
                     Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconMaterial Margin="0,0,4,0" Kind="TrashCanOutline" />
-                        <TextBlock VerticalAlignment="Bottom">削除</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Delete</TextBlock>
                     </DockPanel>
                 </Button>
             </StackPanel>

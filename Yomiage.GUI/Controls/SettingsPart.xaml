@@ -72,12 +72,12 @@
                 Margin="5,0,0,0"/>
         </StackPanel>
         <DockPanel x:Name="fileSection">
-            <Button DockPanel.Dock="Right" Margin="5,0,0,0" Click="SelectFile">ファイル選択</Button>
+            <Button DockPanel.Dock="Right" Margin="5,0,0,0" Click="SelectFile">Browse</Button>
             <TextBox Text="{Binding sVal.Value, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"
                 Margin="5,0,0,0" IsReadOnly="True"/>
         </DockPanel>
         <DockPanel x:Name="folderSection">
-            <Button DockPanel.Dock="Right" Margin="5,0,0,0" Click="SelectFolder">フォルダ選択</Button>
+            <Button DockPanel.Dock="Right" Margin="5,0,0,0" Click="SelectFolder">Browse</Button>
             <TextBox Text="{Binding sVal.Value, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type UserControl}}}"
                 Margin="5,0,0,0" IsReadOnly="True"/>
         </DockPanel>

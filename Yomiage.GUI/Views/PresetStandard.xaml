@@ -15,7 +15,7 @@
         <!-- 検索ボタン -->
         <DockPanel DockPanel.Dock="Top" Margin="0,3,0,3" Height="26">
             <TextBox mah:TextBoxHelper.ClearTextButton="True"
-                     mah:TextBoxHelper.Watermark="検索..."
+                     mah:TextBoxHelper.Watermark="Browse..."
                      Text="{Binding SearchText.Value, UpdateSourceTrigger=PropertyChanged}">
                 <TextBox.InputBindings>
                     <KeyBinding Key="Return"/>
@@ -37,7 +37,7 @@
             <Button Style="{StaticResource IconButton}" Command="{Binding CopyCommand}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Kind="RegularCopyAlt" Margin="0,0,4,0"/>
-                    <TextBlock VerticalAlignment="Bottom">コピー</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom">Copy</TextBlock>
                 </DockPanel>
             </Button>
         </StackPanel>

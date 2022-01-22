@@ -18,21 +18,21 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Row="0" Grid.Column="0" Margin="10">普通名詞</Button>
-                <Button Grid.Row="0" Grid.Column="1" Margin="10">固有名詞</Button>
-                <Button Grid.Row="0" Grid.Column="2" Margin="10">人名</Button>
-                <Button Grid.Row="1" Grid.Column="0" Margin="10">人名（姓）</Button>
-                <Button Grid.Row="1" Grid.Column="1" Margin="10">人名（名）</Button>
-                <Button Grid.Row="1" Grid.Column="2" Margin="10">地名</Button>
-                <Button Grid.Row="2" Grid.Column="0" Margin="10">ｻ変名詞</Button>
-                <Button Grid.Row="2" Grid.Column="1" Margin="10">形容動詞</Button>
-                <Button Grid.Row="2" Grid.Column="2" Margin="10">記号</Button>
+                <Button Grid.Row="0" Grid.Column="0" Margin="10">Common Nouns</Button>
+                <Button Grid.Row="0" Grid.Column="1" Margin="10">Propper Nouns</Button>
+                <Button Grid.Row="0" Grid.Column="2" Margin="10">Names</Button>
+                <Button Grid.Row="1" Grid.Column="0" Margin="10">Last Names</Button>
+                <Button Grid.Row="1" Grid.Column="1" Margin="10">First Names</Button>
+                <Button Grid.Row="1" Grid.Column="2" Margin="10">Places</Button>
+                <Button Grid.Row="2" Grid.Column="0" Margin="10">Suru Noun</Button>
+                <Button Grid.Row="2" Grid.Column="1" Margin="10">Adjective</Button>
+                <Button Grid.Row="2" Grid.Column="2" Margin="10">Symbols</Button>
             </Grid>
         </Border>
         <Label Height="200" Margin="0,3,0,3"
                BorderThickness="1" BorderBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"/>
         <DockPanel>
-            <Button Command="{Binding CancelCommand}" DockPanel.Dock="Right" Width="80" Margin="3">キャンセル</Button>
+            <Button Command="{Binding CancelCommand}" DockPanel.Dock="Right" Width="80" Margin="3">Cancel</Button>
             <Button Command="{Binding OkCommand}" DockPanel.Dock="Right" Width="80" Margin="3">OK</Button>
             <Label/>
         </DockPanel>

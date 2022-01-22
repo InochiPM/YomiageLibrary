@@ -10,7 +10,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class HinshiSelectViewModel : DialogViewModelBase
     {
-        public override string Title => "記号ポーズ";
+        public override string Title => "Pause";
 
     }
 }

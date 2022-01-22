@@ -19,7 +19,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class LibraryListViewModel : DialogViewModelBase
     {
-        public override string Title => "音声ライブラリ一覧";
+        public override string Title => "Voice Library List";
         public ReactiveCommand AddCommand { get; }
         public ReactiveCommand RemoveCommand { get; }
         public ReactiveCommand OpenFolderCommand { get; }
@@ -50,7 +50,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
         {
             var ofd = new OpenFileDialog()
             {
-                Filter = "音声ライブラリ(.vlib)|*.vlib",
+                Filter = "Voice Library(.vlib)|*.vlib",
                 Multiselect = true,
             };
 
@@ -82,10 +82,10 @@ namespace Yomiage.GUI.Dialog.ViewModels
             ConfigService.LoadLibrary(ConfigService.LibraryDirectory);
             ConfigService.InitPreset();
 
-            var Text = configs.Count == 0 ? ($"音声ライブラリが見つかりませんでした。") :
-                                            ($"音声ライブラリが {configs.Count} 件みつかりました。");
+            var Text = configs.Count == 0 ? ($"Could not find voice library.") :
+                                            ($" {configs.Count} Audio Libraries were found.");
 
-            MessageBox.Show(Text, "音声ライブラリのインストール", MessageBoxButton.OK);
+            MessageBox.Show(Text, "Install Audio Library", MessageBoxButton.OK);
 
         }
 

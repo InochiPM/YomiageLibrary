@@ -10,7 +10,7 @@
     <DockPanel>
         <!-- 下部ボタン -->
         <DockPanel DockPanel.Dock="Bottom" Margin="3">
-            <Button DockPanel.Dock="Right" Command="{Binding CancelCommand}">キャンセル</Button>
+            <Button DockPanel.Dock="Right" Command="{Binding CancelCommand}" Content="Cancel"/>
             <Button DockPanel.Dock="Right" Command="{Binding OkCommand}" Margin="0,0,3,0">OK</Button>
             <Label/>
         </DockPanel>
@@ -21,8 +21,8 @@
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0">プリセット名</Label>
-            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding PresetName.Value}" d:Text="プリセット名"/>
+            <Label Grid.Row="0" Content="Preset Name"/>
+            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding PresetName.Value}" d:Text="Preset Name"/>
         </Grid>
 
         <!-- リスト -->

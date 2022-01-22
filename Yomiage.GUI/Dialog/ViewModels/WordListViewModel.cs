@@ -16,7 +16,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class WordListViewModel : DialogViewModelBase
     {
-        public override string Title => "単語一覧";
+        public override string Title => "Word List";
 
         private readonly ReactiveCollection<WordDisplaySet> WordListOrigin = new();
         public IFilteredReadOnlyObservableCollection<WordDisplaySet> WordList { get; }
@@ -87,7 +87,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
         }
         private void DeleteAction()
         {
-            var result = MessageBox.Show("選択されている単語を削除してよろしいですか？", "確認", MessageBoxButton.OKCancel);
+            var result = MessageBox.Show("Are you sure you want to\ndelete the selected words?", "Warning", MessageBoxButton.OKCancel);
             if(result != MessageBoxResult.OK) { return; }
             wordDictionaryService.UnRegiserDictionary(Selected.Value.OriginalText);
             WordListOrigin.Remove(Selected.Value);

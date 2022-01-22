@@ -18,7 +18,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class SettingEnvironmentViewModel : DialogViewModelBase
     {
-        public override string Title => "環境設定";
+        public override string Title => "Preferences";
 
         public ReactivePropertySlim<int> ThemeIndex { get; set; }
         public SettingService SettingService { get; }

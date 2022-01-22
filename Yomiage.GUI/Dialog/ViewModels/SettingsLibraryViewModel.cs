@@ -18,7 +18,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class SettingsLibraryViewModel : DialogViewModelBase
     {
-        public override string Title => "ライブラリ設定";
+        public override string Title => "Library Settings";
 
         public Library Library { get; set; }
 
@@ -157,7 +157,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
         }
         private void DefaultAction()
         {
-            if (MessageBox.Show("全ての設定値をデフォルト値に戻します。\nよろしいですか？ ", "リセット確認", MessageBoxButton.OKCancel) != MessageBoxResult.OK) { return; }
+            if (MessageBox.Show("Are you sure you want to reset\nthe values back to defaults?", "Warning", MessageBoxButton.OKCancel) != MessageBoxResult.OK) { return; }
             foreach (var s in Settings)
             {
                 if (s is BoolSetting sb) { sb.Value = sb.DefaultValue; }

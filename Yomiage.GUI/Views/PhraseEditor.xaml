@@ -34,8 +34,8 @@
                 Header="進む"
                 InputGestureText="Ctrl+Y" />
             <Separator />
-            <MenuItem Command="{Binding CopyEditorCommand}" Header="タブをコピー" />
-            <MenuItem Click="MenuItem_Click" Header="クリップボードに画像をコピー" />
+            <MenuItem Command="{Binding CopyEditorCommand}" Header="Copy Tab" />
+            <MenuItem Click="MenuItem_Click" Header="Copy to Clipboard" />
             <!--<MenuItem Command="{Binding CopyCommand}" Header="コピー" />
             <MenuItem Command="{Binding PasteCommand}" Header="貼り付け" />-->
         </ContextMenu>
@@ -87,7 +87,7 @@
                         Margin="0,0,4,0"
                         Kind="SolidShareAlt"
                         RotationAngle="90" />
-                    <TextBlock VerticalAlignment="Bottom">標準語に変換</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom">Convert</TextBlock>
                 </DockPanel>
             </Button>
             <StackPanel Orientation="Horizontal">
@@ -110,7 +110,7 @@
                         </Button.Style>
                         <DockPanel>
                             <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularPlayCircle" />
-                            <TextBlock VerticalAlignment="Bottom">再生</TextBlock>
+                            <TextBlock VerticalAlignment="Bottom">Play</TextBlock>
                         </DockPanel>
                     </Button>
                     <Button
@@ -119,14 +119,14 @@
                         Visibility="{Binding VoicePlayerService.IsPlaying.Value, Converter={StaticResource BooleanToVisibilityConverter}}">
                         <DockPanel>
                             <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularPauseCircle" />
-                            <TextBlock VerticalAlignment="Bottom">再生</TextBlock>
+                            <TextBlock VerticalAlignment="Bottom">Play</TextBlock>
                         </DockPanel>
                     </Button>
                 </Grid>
                 <Button Command="{Binding StopCommand}" Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularStopCircle" />
-                        <TextBlock VerticalAlignment="Bottom">停止</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Stop</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button
@@ -135,7 +135,7 @@
                     Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="SolidSave" />
-                        <TextBlock VerticalAlignment="Bottom">登録</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Save</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button
@@ -144,13 +144,13 @@
                     Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="SolidSave" />
-                        <TextBlock VerticalAlignment="Bottom">キャラ登録</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Save as</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button Command="{Binding UnRegisterCommand}" Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconMaterial Margin="0,0,6,0" Kind="TrashCanOutline" />
-                        <TextBlock VerticalAlignment="Bottom">登録解除</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Delete Save</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button
@@ -159,7 +159,7 @@
                     Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconMaterial Margin="0,0,6,0" Kind="FormatListBulletedSquare" />
-                        <TextBlock VerticalAlignment="Bottom">一覧</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">List</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button
@@ -168,19 +168,19 @@
                     Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularRefresh" />
-                        <TextBlock VerticalAlignment="Bottom">クリア</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Clear</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button Command="{Binding UndoCommand}" Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularUndo" />
-                        <TextBlock VerticalAlignment="Bottom">戻る</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Undo</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button Command="{Binding RedoCommand}" Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularRedo" />
-                        <TextBlock VerticalAlignment="Bottom">進む</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Redo</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button
@@ -189,13 +189,13 @@
                     Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularDownload" />
-                        <TextBlock VerticalAlignment="Bottom">音声保存</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Export</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button Click="Button_Click" Style="{StaticResource IconButton}">
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularImageAlt" />
-                        <TextBlock VerticalAlignment="Bottom">画像保存</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Save Image</TextBlock>
                     </DockPanel>
                 </Button>
             </StackPanel>
@@ -242,7 +242,7 @@
                                 Margin="0,0,4,0"
                                 Kind="SolidShareAlt"
                                 RotationAngle="90" />
-                                <TextBlock VerticalAlignment="Bottom">アクセント</TextBlock>
+                                <TextBlock VerticalAlignment="Bottom">Accent</TextBlock>
                             </DockPanel>
                         </Button>
                     </Border>

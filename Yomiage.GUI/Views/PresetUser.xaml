@@ -16,19 +16,19 @@
             <Button Style="{StaticResource IconButton}" Command="{Binding CreateCommand}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Kind="RegularNews" Margin="0,0,4,0"/>
-                    <TextBlock VerticalAlignment="Bottom">新規</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom" Text="New"/>
                 </DockPanel>
             </Button>
             <Button Style="{StaticResource IconButton}" Command="{Binding CopyCommand}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Kind="RegularCopyAlt" Margin="0,0,4,0"/>
-                    <TextBlock VerticalAlignment="Bottom">コピー</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom" Text="Copy"/>
                 </DockPanel>
             </Button>
             <Button Style="{StaticResource IconButton}" Command="{Binding DeleteCommand}">
                 <DockPanel>
                     <icon:PackIconMaterial Kind="TrashCanOutline" Margin="0,0,4,0"/>
-                    <TextBlock VerticalAlignment="Bottom">削除</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom">Delete</TextBlock>
                 </DockPanel>
             </Button>
         </StackPanel>
@@ -43,7 +43,7 @@
                 <icon:PackIconBoxIcons Kind="RegularFilterAlt" Width="14"/>
             </Button>-->
             <TextBox mah:TextBoxHelper.ClearTextButton="True"
-                     mah:TextBoxHelper.Watermark="検索..."
+                     mah:TextBoxHelper.Watermark="Browse..."
                      Text="{Binding SearchText.Value, UpdateSourceTrigger=PropertyChanged}">
                 <TextBox.InputBindings>
                     <KeyBinding Key="Return"/>

@@ -9,54 +9,54 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class SettingShortcutViewModel : DialogViewModelBase
     {
-        public override string Title => "ショートカットキー";
+        public override string Title => "Shortcuts";
 
         public ReactiveCollection<Item> Items { get; } = new ReactiveCollection<Item>();
 
         public SettingShortcutViewModel()
         {
-            Items.Add(new Item() { Operation = "テキスト欄の再生", Key = "F5", Target = "テキスト" });
-            Items.Add(new Item() { Operation = "テキスト欄の停止", Key = "F6", Target = "テキスト" });
+            Items.Add(new Item() { Operation = "Play", Key = "F5", Target = "Text" });
+            Items.Add(new Item() { Operation = "Stop", Key = "F6", Target = "Text" });
 
-            Items.Add(new Item() { Operation = "前の行の再生", Key = "Ctrl + Left", Target = "テキスト" });
-            Items.Add(new Item() { Operation = "後の行の再生", Key = "Ctrl + Right", Target = "テキスト" });
+            Items.Add(new Item() { Operation = "Play Previous Line", Key = "Ctrl + Left", Target = "Text" });
+            Items.Add(new Item() { Operation = "Play Next Line", Key = "Ctrl + Right", Target = "Text" });
 
-            Items.Add(new Item() { Operation = "音声の保存", Key = "Ctrl + Shift + Alt + S", Target = "テキスト または フレーズ編集" });
+            Items.Add(new Item() { Operation = "Save As", Key = "Ctrl + Shift + Alt + S", Target = "Text or Phrase Editor" });
 
-            Items.Add(new Item() { Operation = "フレーズの再生と停止", Key = "Space", Target = "フレーズ編集" });
+            Items.Add(new Item() { Operation = "Stop or Play Phrases", Key = "Space", Target = "Phrase Editor" });
 
-            Items.Add(new Item() { Operation = "フレーズの登録", Key = "Shift + S", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "フレーズ編集タブのコピー", Key = "Shift + C", Target = "フレーズ編集" });
+            Items.Add(new Item() { Operation = "Add Phrase", Key = "Shift + S", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Copy Phrase Editor Tab", Key = "Shift + C", Target = "Phrase Editor" });
 
-            Items.Add(new Item() { Operation = "イントネーション画面の表示", Key = "1", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "パラメータ画面２の表示", Key = "2", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "パラメータ画面３の表示", Key = "3", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "パラメータ画面４の表示", Key = "4", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "パラメータ画面５の表示", Key = "5", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "パラメータ画面６の表示", Key = "6", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "パラメータ画面７の表示", Key = "7", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "パラメータ画面８の表示", Key = "8", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "パラメータ画面９の表示", Key = "9", Target = "フレーズ編集" });
+            Items.Add(new Item() { Operation = "Show Innotation", Key = "1", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Show Parameter Screen 2", Key = "2", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Show Parameter Screen ３", Key = "3", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Show Parameter Screen ４", Key = "4", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Show Parameter Screen ５", Key = "5", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Show Parameter Screen ６", Key = "6", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Show Parameter Screen ７", Key = "7", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Show Parameter Screen ８", Key = "8", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Show Parameter Screen ９", Key = "9", Target = "Phrase Editor" });
 
-            Items.Add(new Item() { Operation = "語尾を --- にする", Key = "NumPad0", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "語尾を 通常。 にする", Key = "NumPad1", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "語尾を 呼び掛け♪ にする", Key = "NumPad2", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "語尾を 疑問？ にする", Key = "NumPad3", Target = "フレーズ編集" });
-            Items.Add(new Item() { Operation = "語尾を 断定！ にする", Key = "NumPad4", Target = "フレーズ編集" });
+            Items.Add(new Item() { Operation = "Change word end to ---", Key = "NumPad0", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Change to Normal", Key = "NumPad1", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Change to Happy", Key = "NumPad2", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Change to Question?", Key = "NumPad3", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Change to Exclamation!", Key = "NumPad4", Target = "Phrase Editor" });
 
-            Items.Add(new Item() { Operation = "アクセントマークの上下切り替え", Key = "A", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "無声化の切り替え", Key = "V", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "アクセント句の結合と分割", Key = "S", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "アクセント句の削除", Key = "Shift + D", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "文中ポーズの切り替え", Key = "P", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "任意ポーズの設定", Key = "Shift + P", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "読み編集", Key = "Y", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "長音（ー）を増やす", Key = "M", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "長音（ー）を減らす", Key = "Shift + M", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "促音（ー）を増やす", Key = "T", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "促音（ー）を減らす", Key = "Shift + T", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "母音と長音の切り替え", Key = "B", Target = "フレーズ編集（音素）" });
-            Items.Add(new Item() { Operation = "通常の発音と拗音の切り替え", Key = "N", Target = "フレーズ編集（音素）" });
+            Items.Add(new Item() { Operation = "Switch the accent mark up or down", Key = "A", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "Switch to Silence", Key = "V", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "Merge or Split Accent Phrase", Key = "S", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "Remove Accent Phrase", Key = "Shift + D", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "Toggle in-text pause", Key = "P", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "Optional Pause Setting", Key = "Shift + P", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "read-write editing", Key = "Y", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "Increase the number of long tones (-)", Key = "M", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "Decrease the number of long tones (-)", Key = "Shift + M", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "Increase the number of stress sounds (-)", Key = "T", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "Decrease the number of stress sounds (-)", Key = "Shift + T", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "Toggle vowels and long vowels", Key = "B", Target = "Phrase Editor (Phoneme)" });
+            Items.Add(new Item() { Operation = "Toggle normal and guttural", Key = "N", Target = "Phrase Editor (Phoneme)" });
 
         }
 

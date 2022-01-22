@@ -13,7 +13,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class TextViewModel : DialogViewModelBase
     {
-        public override string Title => "ライセンス";
+        public override string Title => "License";
 
         public ReactivePropertySlim<string> TextPath { get; } = new();
         public ReactivePropertySlim<string> Text { get; } = new();

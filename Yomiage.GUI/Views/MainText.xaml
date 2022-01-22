@@ -73,7 +73,7 @@
                     </Button.Style>
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularPlayCircle" />
-                        <TextBlock VerticalAlignment="Bottom">再生</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Play</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button
@@ -82,26 +82,26 @@
                     Visibility="{Binding VoicePlayerService.IsPlaying.Value, Converter={StaticResource BooleanToVisibilityConverter}}">
                     <DockPanel>
                         <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularPauseCircle" />
-                        <TextBlock VerticalAlignment="Bottom">再生</TextBlock>
+                        <TextBlock VerticalAlignment="Bottom">Play</TextBlock>
                     </DockPanel>
                 </Button>
             </Grid>
             <Button Command="{Binding StopCommand}" Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularStopCircle" />
-                    <TextBlock VerticalAlignment="Bottom">停止</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom">Stop</TextBlock>
                 </DockPanel>
             </Button>
             <Button Click="Button_Click" Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularSkipPreviousCircle" />
-                    <TextBlock VerticalAlignment="Bottom">先頭</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom">Skip Back</TextBlock>
                 </DockPanel>
             </Button>
             <Button Click="Button_Click_1" Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularSkipNextCircle" />
-                    <TextBlock VerticalAlignment="Bottom">末尾</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom">Skip Forward</TextBlock>
                 </DockPanel>
             </Button>
             <Button
@@ -110,7 +110,7 @@
                 Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Margin="0,0,6,0" Kind="RegularDownload" />
-                    <TextBlock VerticalAlignment="Bottom">音声保存</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom">Save Voice</TextBlock>
                 </DockPanel>
             </Button>
             <Button
@@ -119,7 +119,7 @@
                 Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Margin="0,0,6,0" Kind="RegularCog" />
-                    <TextBlock VerticalAlignment="Bottom">保存設定</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom" Text="Settings"/>
                 </DockPanel>
             </Button>
             <!--<Button Style="{StaticResource IconButton}">
@@ -175,34 +175,34 @@
                             </ContextMenu.Resources>
                             <MenuItem
                                 Click="MenuItem_Cut"
-                                Header="切り取り"
+                                Header="Cut"
                                 InputGestureText="Ctrl+X" />
                             <MenuItem
                                 Click="MenuItem_Copy"
-                                Header="コピー"
+                                Header="Copy"
                                 InputGestureText="Ctrl+C" />
                             <MenuItem
                                 Click="MenuItem_Paste"
-                                Header="貼り付け"
+                                Header="Paste"
                                 InputGestureText="Ctrl+V" />
                             <Separator />
                             <MenuItem
                                 x:Name="add"
-                                Header="ボイスプリセットを割り当てる"
+                                Header="Apply Preset"
                                 InputGestureText="Ctrl+I" />
                             <MenuItem
                                 x:Name="remove"
-                                Header="ボイスプリセットの割り当てを解除"
+                                Header="Remove Preset"
                                 InputGestureText="Ctrl+U" />
                             <Separator />
                             <MenuItem
                                 x:Name="word"
-                                Header="単語の編集"
+                                Header="Edit Words"
                                 InputGestureText="Ctrl+w" />
                             <Separator />
                             <MenuItem
                                 Command="{Binding PlayCommand}"
-                                Header="再生"
+                                Header="Play"
                                 InputGestureText="F5" />
                         </ContextMenu>
                     </RichTextBox.ContextMenu>

@@ -14,7 +14,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class PauseEditViewModel : DialogViewModelBase
     {
-        public override string Title => "ポーズ長編集";
+        public override string Title => "Long Pause";
         public ReactivePropertySlim<int> Min { get; } = new ReactivePropertySlim<int>(-300);
         public ReactivePropertySlim<int> Max { get; } = new ReactivePropertySlim<int>(30000);
         public ReactivePropertySlim<int> Span_ms { get; } = new ReactivePropertySlim<int>(0);

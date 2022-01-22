@@ -14,7 +14,7 @@
                 Margin="0,0,3,0"
                 Command="{Binding OkCommand}"
                 DockPanel.Dock="Right">
-                閉じる
+                Close
             </Button>
             <Label />
         </DockPanel>
@@ -27,9 +27,9 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <Label>
-                    API テスト
+                    API Test
                 </Label>
-                <Button Command="{Binding OpenCommand}">ブラウザで開く</Button>
+                <Button Command="{Binding OpenCommand}">Open in Browser</Button>
             </StackPanel>
         </StackPanel>
     </DockPanel>

@@ -11,7 +11,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class PresetFilterViewModel : DialogViewModelBase
     {
-        public override string Title => "ボイスプリセットフィルター";
+        public override string Title => "Voice Preset Filters";
 
     }
 

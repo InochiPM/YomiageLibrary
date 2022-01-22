@@ -10,7 +10,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class SettingProjectViewModel : DialogViewModelBase
     {
-        public override string Title => "プロジェクト設定";
+        public override string Title => "Project Settings";
         public SettingService SettingService { get; }
         private ConfigService ConfigService;
         private PhraseDictionaryService phraseDictionaryService;

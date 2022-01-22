@@ -16,25 +16,25 @@
                 Margin="0,0,3,0"
                 Command="{Binding OkCommand}"
                 DockPanel.Dock="Right">
-                閉じる
+                Close
             </Button>
             <Button
                 Margin="0,0,3,0"
                 Command="{Binding AddCommand}"
                 DockPanel.Dock="Left">
-                追加
+                Add
             </Button>
             <Button
                 Margin="0,0,3,0"
                 Command="{Binding RemoveCommand}"
                 DockPanel.Dock="Left">
-                削除方法
+                Delete
             </Button>
             <Button
                 Margin="0,0,3,0"
                 Command="{Binding OpenFolderCommand}"
                 DockPanel.Dock="Left">
-                インストールフォルダを開く
+                Open Install Folder
             </Button>
             <Label />
         </DockPanel>

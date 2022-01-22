@@ -13,7 +13,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class PresetFusionViewModel : DialogViewModelBase
     {
-        public override string Title => "サブプリセット選択";
+        public override string Title => "Sub-preset Selection";
 
         public ReactivePropertySlim<VoicePreset[]> Presets { get; } = new();
         public ReactivePropertySlim<VoicePreset> Preset { get; } = new();

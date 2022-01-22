@@ -15,27 +15,21 @@
                 <ColumnDefinition Width="80" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
+                <RowDefinition Height="27*" />
+                <RowDefinition Height="23*" />
             </Grid.RowDefinitions>
             <Label
-                Grid.Row="0"
                 Grid.Column="0"
-                VerticalAlignment="Center">
-                見出し
-            </Label>
+                VerticalAlignment="Center" Height="26" Content="Title"/>
             <TextBox
                  FontSize="24"
-                Grid.Row="0"
                 Grid.Column="1"
                 VerticalAlignment="Center"
-                Text="{Binding PauseCharacter.Value, UpdateSourceTrigger=PropertyChanged}" />
+                Text="{Binding PauseCharacter.Value, UpdateSourceTrigger=PropertyChanged}" Height="26" />
             <Label
                 Grid.Row="1"
                 Grid.Column="0"
-                VerticalAlignment="Center">
-                ポーズの長さ
-            </Label>
+                VerticalAlignment="Center" Height="29" Content="Length"/>
             <mah:NumericUpDown
                 Grid.Row="1"
                  FontSize="24"
@@ -44,13 +38,11 @@
                 Maximum="30000"
                 Minimum="-300"
                 UpDownButtonsWidth="16"
-                Value="{Binding PauseSpan_ms.Value}" />
+                Value="{Binding PauseSpan_ms.Value}" Height="42" />
             <Label
                 Grid.Row="1"
                 Grid.Column="2"
-                VerticalAlignment="Center">
-                [ﾐﾘ秒]
-            </Label>
+                VerticalAlignment="Center" Height="29" Content="MS"/>
         </Grid>
         <Separator />
         <DockPanel>
@@ -58,9 +50,7 @@
                 Width="80"
                 Margin="3"
                 Command="{Binding CancelCommand}"
-                DockPanel.Dock="Right">
-                キャンセル
-            </Button>
+                DockPanel.Dock="Right" Content="Cancel"/>
             <Button
                 Width="80"
                 Margin="3"

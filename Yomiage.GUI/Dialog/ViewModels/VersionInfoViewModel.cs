@@ -22,7 +22,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 
         public ReactiveCommand AuthorCommand { get; }
 
-        public override string Title => "バージョン情報";
+        public override string Title => "About UNI-KOE";
 
         public VersionInfoViewModel(IDialogService dialogService)
         {

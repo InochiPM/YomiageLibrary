@@ -18,7 +18,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class PhraseListViewModel : DialogViewModelBase
     {
-        public override string Title => "フレーズ一覧";
+        public override string Title => "Prase List";
 
         private readonly ReactiveCollection<PhraseDisplaySet> PhraseListOrigin = new();
         public IFilteredReadOnlyObservableCollection<PhraseDisplaySet> PhraseList { get; }
@@ -101,7 +101,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
         }
         private void DeleteAction()
         {
-            var result = MessageBox.Show("選択されている単語を削除してよろしいですか？", "確認", MessageBoxButton.OKCancel);
+            var result = MessageBox.Show("Are you sure you want to delete the selected words?", "Warning", MessageBoxButton.OKCancel);
             if (result != MessageBoxResult.OK) { return; }
             phraseDictionaryService.UnRegiserDictionary(Selected.Value.OriginalText);
             PhraseListOrigin.Remove(Selected.Value);

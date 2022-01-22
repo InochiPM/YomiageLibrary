@@ -9,7 +9,7 @@
     <DockPanel>
         <!-- 下部ボタン -->
         <DockPanel DockPanel.Dock="Bottom" Margin="3">
-            <Button Command="{Binding CancelCommand}" DockPanel.Dock="Right">キャンセル</Button>
+            <Button Command="{Binding CancelCommand}" DockPanel.Dock="Right" Content="Cancel"/>
             <Button Command="{Binding OkCommand}" DockPanel.Dock="Right" Margin="0,0,3,0">OK</Button>
             <Label/>
         </DockPanel>

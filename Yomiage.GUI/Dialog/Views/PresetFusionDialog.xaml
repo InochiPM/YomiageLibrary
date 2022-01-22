@@ -9,8 +9,8 @@
     <DockPanel>
         <!-- 下部ボタン -->
         <DockPanel DockPanel.Dock="Bottom" Margin="3">
-            <Button Command="{Binding ReleaseCommand}" DockPanel.Dock="Left" Width="160">サブプリセットを解除する</Button>
-            <Button Command="{Binding CancelCommand}" DockPanel.Dock="Right">キャンセル</Button>
+            <Button Command="{Binding ReleaseCommand}" DockPanel.Dock="Left" Width="160" Content="Cancel Sub-Preset"/>
+            <Button Command="{Binding CancelCommand}" DockPanel.Dock="Right" Content="Cancel"/>
             <Button Command="{Binding OkCommand}" DockPanel.Dock="Right" Margin="0,0,3,0">OK</Button>
             <Label/>
         </DockPanel>
@@ -25,10 +25,10 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0">メインプリセット</Label>
+            <Label Grid.Row="0" Content="Main Preset"/>
             <Label Grid.Row="0" Grid.Column="1" BorderThickness="1" BorderBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"
                    Content="{Binding Preset.Value.Name}"/>
-            <Label Grid.Row="1">サブプリセット</Label>
+            <Label Grid.Row="1" Content="Sub Preset"/>
             <Label Grid.Row="1" Grid.Column="1" BorderThickness="1" BorderBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"
                    Content="{Binding SubPreset.Value.Name}"/>
         </Grid>

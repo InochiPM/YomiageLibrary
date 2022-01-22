@@ -4,20 +4,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:const="clr-namespace:Yomiage.GUI.Data"
-             mc:Ignorable="d">
+             mc:Ignorable="d" Width="407">
     <DockPanel>
         <StackPanel DockPanel.Dock="Top" Margin="0,5,0,0">
-            <Label Content="{x:Static const:ConstData.AppName}"/>
-            <StackPanel Orientation="Horizontal">
-                <Label>version</Label>
+            <Label Content="UNI-COE" Width="262" HorizontalAlignment="Left"/>
+            <Image Height="103" Source="/coloricon.png" Stretch="Fill" Width="103" Margin="-48,-23,-323,-91"/>
+            <StackPanel Orientation="Horizontal" Width="262" HorizontalAlignment="Left">
+                <Label Content="version"/>
                 <Label Content="{Binding Version.Value}"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label>作者：</Label>
-                <Button Command="{Binding AuthorCommand}" BorderThickness="0">ビス</Button>
+            <StackPanel Orientation="Horizontal" Width="262" HorizontalAlignment="Left">
+                <Label Content="Author："/>
+                <Button Command="{Binding AuthorCommand}" BorderThickness="0" Content="ビス"/>
             </StackPanel>
-            <Label>Copyright 2021 bisu</Label>
-            <Label Margin="0,10,0,0">ライブラリ情報</Label>
+            <Label Content="Copyright ©　2021 bisu &#xD;&#xA;English Version: 小禄 命"/>
+            <Label Margin="0,10,0,0" Content="Library Info"/>
         </StackPanel>
 
         <DockPanel DockPanel.Dock="Bottom">
@@ -29,12 +30,12 @@
         <ListView MinHeight="300" ItemsSource="{Binding ComponentList}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ライブラリ名" DisplayMemberBinding="{Binding Name}" Width="200"/>
-                    <GridViewColumn Header="バージョン" DisplayMemberBinding="{Binding Version}" Width="100"/>
-                    <GridViewColumn Header="ライセンス" Width="100">
+                    <GridViewColumn Header="Library Name" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                    <GridViewColumn Header="Version" DisplayMemberBinding="{Binding Version}" Width="100"/>
+                    <GridViewColumn Header="License" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="表示" Command="{Binding ShowCommand}" Visibility="{Binding CanShow.Value, Converter={StaticResource BooleanToVisibilityConverter}}" MinHeight="22" Height="22" Padding="0"/>
+                                <Button Content="Show" Command="{Binding ShowCommand}" Visibility="{Binding CanShow.Value, Converter={StaticResource BooleanToVisibilityConverter}}" MinHeight="22" Height="22" Padding="0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

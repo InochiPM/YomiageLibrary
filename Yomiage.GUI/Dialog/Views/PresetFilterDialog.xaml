@@ -8,10 +8,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <DockPanel>
         <DockPanel DockPanel.Dock="Bottom" Margin="3">
-            <Button DockPanel.Dock="Left">全選択</Button>
-            <Button DockPanel.Dock="Left" Margin="3,0,0,0">全解除</Button>
-            <Button Command="{Binding CancelCommand}" DockPanel.Dock="Right">キャンセル</Button>
-            <Button Command="{Binding OkCommand}" DockPanel.Dock="Right" Margin="0,0,3,0">OK</Button>
+            <Button DockPanel.Dock="Left" Content="All"/>
+            <Button DockPanel.Dock="Left" Margin="3,0,0,0" Content="Full"/>
+            <Button Command="{Binding CancelCommand}" DockPanel.Dock="Right" Content="Cancel"/>
+            <Button Command="{Binding OkCommand}" DockPanel.Dock="Right" Margin="0,0,3,0" Content="OKay"/>
             <Label/>
         </DockPanel>
         <ListView MinHeight="300" MinWidth="500" Margin="3"/>

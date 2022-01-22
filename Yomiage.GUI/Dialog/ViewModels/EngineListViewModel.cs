@@ -19,7 +19,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
 {
     class EngineListViewModel : DialogViewModelBase
     {
-        public override string Title => "エンジン一覧";
+        public override string Title => "Engine List";
         public ReactiveCommand AddCommand { get; }
         public ReactiveCommand RemoveCommand { get; }
         public ReactiveCommand OpenFolderCommand { get; }
@@ -50,7 +50,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
         {
             var ofd = new OpenFileDialog()
             {
-                Filter = "音声合成エンジン(.veng)|*.veng",
+                Filter = "Speech Synthesis Engine(.veng)|*.veng",
                 Multiselect = true,
             };
 
@@ -83,10 +83,10 @@ namespace Yomiage.GUI.Dialog.ViewModels
             ConfigService.LoadEngine(ConfigService.EngineDirectory);
             ConfigService.InitPreset();
 
-            var Text = configs.Count == 0 ? ($"音声合成エンジンが見つかりませんでした。") :
-                                            ($"音声合成エンジンが {configs.Count} 件みつかりました。");
+            var Text = configs.Count == 0 ? ($"No text-to-speech engine found.") :
+                                            ($"Found {configs.Count} text-to-speech engines.");
 
-            MessageBox.Show(Text, "音声合成エンジンのインストール", MessageBoxButton.OK);
+            MessageBox.Show(Text, "Install the text-to-speech engine", MessageBoxButton.OK);
         }
 
         private void RemoveAction()

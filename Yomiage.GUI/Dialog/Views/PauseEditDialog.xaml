@@ -35,12 +35,12 @@
                 <Label Content="{Binding Min.Value}"/>
                 <Label VerticalAlignment="Center">~</Label>
                 <Label Content="{Binding Max.Value}"/>
-                <Label VerticalAlignment="Center">[ﾐﾘ秒]</Label>
+                <Label VerticalAlignment="Center" Content="MS"/>
             </StackPanel>
         </StackPanel>
         <Separator/>
         <DockPanel>
-            <Button DockPanel.Dock="Right" Command="{Binding CancelCommand}" Width="80" Margin="3">キャンセル</Button>
+            <Button DockPanel.Dock="Right" Command="{Binding CancelCommand}" Width="80" Margin="3" Content="Cancel"/>
             <Button DockPanel.Dock="Right" Command="{Binding OkCommand}" Width="80" Margin="3" IsDefault="True">OK</Button>
             <Label/>
         </DockPanel>

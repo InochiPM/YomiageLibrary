@@ -17,7 +17,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
         protected CompositeDisposable Disposables { get; } = new CompositeDisposable();
         public void Dispose() => Disposables.Dispose();
 
-        public virtual string Title => "タイトル";
+        public virtual string Title => "Title";
 
         protected ReactivePropertySlim<bool> CanOk { get; } = new ReactivePropertySlim<bool>(true);
         protected ReactivePropertySlim<bool> CanCancel { get; } = new ReactivePropertySlim<bool>(true);

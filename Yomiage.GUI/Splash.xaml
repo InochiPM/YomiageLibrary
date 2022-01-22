@@ -21,8 +21,8 @@
                                   Height="10">
             </mah:MetroProgressBar>
             <Grid>
-                <Image Grid.Row="1" x:Name="image2" Source="./スプラッシュ.png"/>
-                <TextBlock x:Name="text" Text="起動中" VerticalAlignment="Bottom"
+                <Image Grid.Row="1" x:Name="image2" Source="./splash.png"/>
+                <TextBlock x:Name="text" Text="Loading" VerticalAlignment="Bottom"
                        Foreground="White"/>
             </Grid>
         </DockPanel>
