@@ -49,8 +49,8 @@ namespace Yomiage.GUI.ViewModels
 
         private string FileValidation(string s)
         {
-            return string.IsNullOrWhiteSpace(s) ? "辞書のファイルパスを入力してください。" :
-                !File.Exists(s) ? "ファイルが存在しません。" : null;
+            return string.IsNullOrWhiteSpace(s) ? "Enter the file path of the dictionary." :
+                !File.Exists(s) ? "The file does not exist." : null;
         }
 
         private void SelectAction(string param)
@@ -66,7 +66,7 @@ namespace Yomiage.GUI.ViewModels
         {
             var ofd = new OpenFileDialog()
             {
-                Filter = "フレーズ辞書 (.ypdic)|*.ypdic",
+                Filter = "Phrase Dictionary (.ypdic)|*.ypdic",
                 InitialDirectory = this.configService.PhraseDirectory,
             };
             if (ofd.ShowDialog() == true)
@@ -78,7 +78,7 @@ namespace Yomiage.GUI.ViewModels
         {
             var ofd = new OpenFileDialog()
             {
-                Filter = "ポーズ辞書 (.ysdic)|*.ysdic",
+                Filter = "Pause Dictionary (.ysdic)|*.ysdic",
                 InitialDirectory = this.configService.PauseDirectory,
             };
             if (ofd.ShowDialog() == true)
@@ -90,7 +90,7 @@ namespace Yomiage.GUI.ViewModels
         {
             var ofd = new OpenFileDialog()
             {
-                Filter = "単語辞書 (.ywdic)|*.ywdic",
+                Filter = "Word Dictionary (.ywdic)|*.ywdic",
                 InitialDirectory = this.configService.WordDirectory,
             };
             if (ofd.ShowDialog() == true)
@@ -112,7 +112,7 @@ namespace Yomiage.GUI.ViewModels
         {
             var sfd = new SaveFileDialog()
             {
-                Filter = "フレーズ辞書 (.ypdic)|*.ypdic",
+                Filter = "Phrase Dictionary (.ypdic)|*.ypdic",
                 InitialDirectory = this.configService.PhraseDirectory,
             };
             if (sfd.ShowDialog() == true)
@@ -125,7 +125,7 @@ namespace Yomiage.GUI.ViewModels
         {
             var sfd = new SaveFileDialog()
             {
-                Filter = "ポーズ辞書 (.ysdic)|*.ysdic",
+                Filter = "Pause Dictionary (.ysdic)|*.ysdic",
                 InitialDirectory = this.configService.PauseDirectory,
             };
             if (sfd.ShowDialog() == true)
@@ -138,7 +138,7 @@ namespace Yomiage.GUI.ViewModels
         {
             var sfd = new SaveFileDialog()
             {
-                Filter = "単語辞書 (.ywdic)|*.ywdic",
+                Filter = "Word Dictionary (.ywdic)|*.ywdic",
                 InitialDirectory = this.configService.WordDirectory,
             };
             if (sfd.ShowDialog() == true)

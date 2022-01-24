@@ -79,7 +79,7 @@ namespace Yomiage.GUI.ViewModels
         private void CopyAction()
         {
             if (SelectedPreset.Value == null) { return; }
-            var result = MessageBox.Show(SelectedPreset.Value.Name + " のコピーを作成してよろしいですか？", "確認", MessageBoxButton.YesNo);
+            var result = MessageBox.Show(SelectedPreset.Value.Name + " can be coppied.\nare you sure you want to?", "Warning", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)
             {
                 this.VoicePresetService.Copy(this.SelectedPreset.Value);
@@ -89,7 +89,7 @@ namespace Yomiage.GUI.ViewModels
         private void DeleteAction()
         {
             if (this.SelectedPreset.Value == null) { return; }
-            var result = MessageBox.Show(this.SelectedPreset.Value.Name + " を削除してよろしいですか？", "確認", MessageBoxButton.YesNo);
+            var result = MessageBox.Show(this.SelectedPreset.Value.Name + " will be deleted. Are you sure?", "Warning", MessageBoxButton.YesNo);
             if (result == MessageBoxResult.Yes)
             {
                 this.VoicePresetService.Remove(this.SelectedPreset.Value);

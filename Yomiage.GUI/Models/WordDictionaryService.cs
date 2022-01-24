@@ -66,7 +66,7 @@ namespace Yomiage.GUI.Models
         public void Edit(string key)
         {
             if (string.IsNullOrWhiteSpace(key)) { return; }
-            EditWord edit = new() { OriginalText = key, Phrase = new TalkScript(), Priority = "3.標準" };
+            EditWord edit = new() { OriginalText = key, Phrase = new TalkScript(), Priority = "3.Mid" };
             if (WordDictionarys.TryGetValue(key, out WordSet word))
             {
                 edit.Phrase = TalkScript.GetTalkScript_fromPhraseJsonText(word.JsonText);
@@ -79,7 +79,7 @@ namespace Yomiage.GUI.Models
         public void Send(string word)
         {
             if (string.IsNullOrWhiteSpace(word)) { return; }
-            EditWord edit = new() { OriginalText = word, Phrase = null, Priority = "3.標準" };
+            EditWord edit = new() { OriginalText = word, Phrase = null, Priority = "3.Mid" };
             this.messageBroker.Publish(edit);
             this.messageBroker.Publish(new ChangeTuningTab() { TabIndex = 4 });
         }

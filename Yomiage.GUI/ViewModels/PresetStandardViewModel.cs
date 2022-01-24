@@ -72,7 +72,7 @@ namespace Yomiage.GUI.ViewModels
         private void CopyAction()
         {
             if(this.VoicePresetService.SelectedPreset.Value == null) { return; }
-            var result = MessageBox.Show(this.SelectedPreset.Value.Name + " のコピーを作成してよろしいですか？", "確認", MessageBoxButton.YesNo);
+            var result = MessageBox.Show(this.SelectedPreset.Value.Name + " can be coppied.\nare you sure you want to?", "Warning", MessageBoxButton.YesNo);
             if(result == MessageBoxResult.Yes)
             {
                 this.VoicePresetService.Copy(this.SelectedPreset.Value);

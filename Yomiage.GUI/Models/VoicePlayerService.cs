@@ -482,9 +482,9 @@ namespace Yomiage.GUI.Models
             if (settingService.SaveByDialog)
             {
                 // ファイル保存ダイアログで選択する
-                var sfd = new SaveFileDialog() { Filter = "音声ファイル(.wav) |*.wav| 音声ファイル(.mp3) |*.mp3| 音声ファイル(.wma) |*.wma" };
-                if (settingService.OutputModeMp3) { sfd.Filter = "音声ファイル(.mp3) |*.mp3| 音声ファイル(.wav) |*.wav| 音声ファイル(.wma) |*.wma"; }
-                if (settingService.OutputModeWma) { sfd.Filter = "音声ファイル(.wma) |*.wma| 音声ファイル(.wav) |*.wav| 音声ファイル(.mp3) |*.mp3"; }
+                var sfd = new SaveFileDialog() { Filter = "WAV File(.wav) |*.wav| MP3 File(.mp3) |*.mp3| WMA File(.wma) |*.wma" };
+                if (settingService.OutputModeMp3) { sfd.Filter = "MP3 File(.mp3) |*.mp3| WAV File(.wav) |*.wav| WMA File(.wma) |*.wma"; }
+                if (settingService.OutputModeWma) { sfd.Filter = "WMA File(.wma) |*.wma| WAV File(.wav) |*.wav| MP3 File(.mp3) |*.mp3"; }
                 if (sfd.ShowDialog() != true) { return; }
                 fileName = sfd.FileName;
             }
@@ -494,7 +494,7 @@ namespace Yomiage.GUI.Models
             {
                 using var cofd = new CommonOpenFileDialog()
                 {
-                    Title = "音声保存先フォルダの選択",
+                    Title = "Select a folder to save the audio.",
                     // フォルダ選択モードにする
                     IsFolderPicker = true,
                 };

@@ -9,6 +9,6 @@ namespace Yomiage.GUI.Data
 {
     static class Status
     {
-        public static ReactivePropertySlim<string> StatusText { get; } = new ReactivePropertySlim<string>("起動中");
+        public static ReactivePropertySlim<string> StatusText { get; } = new ReactivePropertySlim<string>("Loading");
     }
 }

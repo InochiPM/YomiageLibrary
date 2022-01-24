@@ -271,7 +271,7 @@ namespace Yomiage.GUI
                             PresetDocking.ActiveContent = this.UserTab;
                         }
                         this.IsEnabled = true;
-                        Data.Status.StatusText.Value = "正常起動　" + "API URL  " + $"http://localhost:{ServerInfo.ApiPort}/api";
+                        Data.Status.StatusText.Value = "Starting　" + "API URL  " + $"http://localhost:{ServerInfo.ApiPort}/api";
 
                         messageBroker.Publish(new AppLoaded());
                     });
@@ -437,9 +437,9 @@ namespace Yomiage.GUI
                 }
                 if (engineConfigs.Count > 0 || libraryConfigs.Count > 0)
                 {
-                    var Text = (libraryConfigs.Count > 0 ? $"音声ライブラリが {libraryConfigs.Count} 件みつかりました。\n" : "") +
-                               (engineConfigs.Count > 0 ? $"音声合成エンジンが {engineConfigs.Count} 件みつかりました。" : "");
-                    MessageBox.Show(Text, "プラグインのインストール", MessageBoxButton.OK);
+                    var Text = (libraryConfigs.Count > 0 ? $"{libraryConfigs.Count} were found.\n" : "") +
+                               (engineConfigs.Count > 0 ? $"{engineConfigs.Count} were found." : "");
+                    MessageBox.Show(Text, "Installing Plugins", MessageBoxButton.OK);
                     ConfigService.LoadEngine(ConfigService.EngineDirectory);
                     ConfigService.LoadLibrary(ConfigService.LibraryDirectory);
                     ConfigService.InitPreset();

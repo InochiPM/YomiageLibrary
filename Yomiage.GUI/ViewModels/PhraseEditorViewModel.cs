@@ -66,8 +66,8 @@ namespace Yomiage.GUI.ViewModels
         public ReactivePropertySlim<int> PlayPosition { get; } = new();
         public ReactivePropertySlim<int> PrePlayPosition { get; } = new(-1);
         public ReadOnlyReactivePropertySlim<bool> IsExtend { get; }
-        public string[] EndChars { get; } = new string[5] { "---", "通常。", "呼びかけ♪", "疑問？", "断定！" };
-        private readonly Dictionary<string, string> EndCharDict = new() { { "", "---" }, { "。", "通常。" }, { "♪", "呼びかけ♪" }, { "？", "疑問？" }, { "！", "断定！" }, };
+        public string[] EndChars { get; } = new string[5] { "---", "Normal", "Tease♪", "Question?", "Exclaim!" };
+        private readonly Dictionary<string, string> EndCharDict = new() { { "", "---" }, { "。", "Normal" }, { "♪", "Tease" }, { "？", "Question?" }, { "！", "Exclaim!" }, };
         public ReactiveProperty<string> SelectedEndChar { get; } = new ReactiveProperty<string>("");
         public ReactiveCommand<string> UpdateCommand { get; }
 
@@ -107,7 +107,7 @@ namespace Yomiage.GUI.ViewModels
             this.wordDictionaryService = wordDictionaryService;
             this.pauseDictionaryService = pauseDictionaryService;
 
-            TitleWithDirty = new ReactivePropertySlim<string>("最初").AddTo(Disposables);
+            TitleWithDirty = new ReactivePropertySlim<string>("Start").AddTo(Disposables);
             Visibility = new ReactivePropertySlim<Visibility>(System.Windows.Visibility.Visible).AddTo(Disposables);
             Content = new ReactiveProperty<string>("").AddTo(Disposables);
 
@@ -311,7 +311,7 @@ namespace Yomiage.GUI.ViewModels
         }
         private void UnRegisterAction()
         {
-            var result = MessageBox.Show("編集中のフレーズを辞書から削除してよろしいですか？", "確認", MessageBoxButton.OKCancel);
+            var result = MessageBox.Show("Are you sure you want to remove\nthe phrase you are editing\nfrom the dictionary?", "Warning", MessageBoxButton.OKCancel);
             if (result != MessageBoxResult.OK) { return; }
             this.phraseDictionaryService.UnRegiserDictionary(this.OriginalText.Value);
             this.scriptService.ActiveScript.Value.PhraseDictionary?.UnRegiserDictionary(this.OriginalText.Value);
@@ -417,7 +417,7 @@ namespace Yomiage.GUI.ViewModels
             else
             {
                 // 変更がある場合は保存するかきく
-                var result = MessageBox.Show("フレーズが保存されていません。\nフレーズ登録しますか？", "フレーズ編集を閉じる", MessageBoxButton.YesNoCancel);
+                var result = MessageBox.Show("No phrases have been added.\nWould you like to add one now?", "Warning", MessageBoxButton.YesNoCancel);
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
@@ -615,16 +615,16 @@ namespace Yomiage.GUI.ViewModels
                         SelectedEndChar.Value = "---";
                         break;
                     case Key.NumPad1:
-                        SelectedEndChar.Value = "通常。";
+                        SelectedEndChar.Value = "Normal";
                         break;
                     case Key.NumPad2:
-                        SelectedEndChar.Value = "呼びかけ♪";
+                        SelectedEndChar.Value = "Tease♪";
                         break;
                     case Key.NumPad3:
-                        SelectedEndChar.Value = "疑問？";
+                        SelectedEndChar.Value = "Question？";
                         break;
                     case Key.NumPad4:
-                        SelectedEndChar.Value = "断定！";
+                        SelectedEndChar.Value = "Exclaim！";
                         break;
                     case Key.A:
                         this.UpdateCommand.Execute("A"); // アクセントの上下

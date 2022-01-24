@@ -39,7 +39,7 @@ namespace Yomiage.GUI.Views
         {
             SaveFileDialog sfd = new()
             {
-                Filter = "画像|*.png",
+                Filter = "Image|*.png",
             };
 
             if (sfd.ShowDialog() == true)

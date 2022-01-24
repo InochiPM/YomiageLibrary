@@ -27,11 +27,11 @@
         <ContextMenu>
             <MenuItem
                 Command="{Binding UndoCommand}"
-                Header="戻る"
+                Header="Back"
                 InputGestureText="Ctrl+Z" />
             <MenuItem
                 Command="{Binding RedoCommand}"
-                Header="進む"
+                Header="Next"
                 InputGestureText="Ctrl+Y" />
             <Separator />
             <MenuItem Command="{Binding CopyEditorCommand}" Header="Copy Tab" />

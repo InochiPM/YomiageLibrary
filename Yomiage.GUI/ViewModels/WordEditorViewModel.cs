@@ -103,7 +103,7 @@ namespace Yomiage.GUI.ViewModels
 
         private void UnRegisterAction()
         {
-            var result = MessageBox.Show("編集中の単語を辞書から削除してよろしいですか？", "確認", MessageBoxButton.OKCancel);
+            var result = MessageBox.Show("Are you sure you want to remove\nthe word you are editing\nfrom the dictionary?", "Warning", MessageBoxButton.OKCancel);
             if (result != MessageBoxResult.OK) { return; }
             this.wordDictionaryService.UnRegiserDictionary(OriginalText.Value);
             UpdateState();
@@ -126,7 +126,7 @@ namespace Yomiage.GUI.ViewModels
         {
             this.OriginalText.Value = null;
             this.Phrase.Value = new TalkScript();
-            this.Priority.Value = "3.標準";
+            this.Priority.Value = "3.Mid";
         }
 
         private void UpdateAction(string param)

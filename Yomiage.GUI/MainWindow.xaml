@@ -493,7 +493,7 @@
                                     </DockingManager.LayoutItemTemplate>
                                     <DockingManager.DocumentContextMenu>
                                         <ContextMenu>
-                                            <MenuItem Command="{Binding Model.CopyEditorCommand}" Header="フレーズ編集を複製する" />
+                                            <MenuItem Command="{Binding Model.CopyEditorCommand}" Header="Duplicate phrase editing" />
                                         </ContextMenu>
                                     </DockingManager.DocumentContextMenu>
                                     <DockingManager.LayoutItemContainerStyle>

@@ -101,7 +101,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
         }
         private void DeleteAction()
         {
-            var result = MessageBox.Show("Are you sure you want to delete the selected words?", "Warning", MessageBoxButton.OKCancel);
+            var result = MessageBox.Show("Are you sure you want to delete\nthe selected words?", "Warning", MessageBoxButton.OKCancel);
             if (result != MessageBoxResult.OK) { return; }
             phraseDictionaryService.UnRegiserDictionary(Selected.Value.OriginalText);
             PhraseListOrigin.Remove(Selected.Value);

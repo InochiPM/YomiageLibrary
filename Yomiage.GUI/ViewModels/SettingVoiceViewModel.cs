@@ -34,8 +34,8 @@ namespace Yomiage.GUI.ViewModels
 
             PresetFilePath = new ReactiveProperty<string>(settingService.PresetFilePath)
                 .SetValidateNotifyError(s =>
-                string.IsNullOrWhiteSpace(s) ? "辞書のファイルパスを入力してください。" :
-                !File.Exists(s) ? "ファイルが存在しません。" : null
+                string.IsNullOrWhiteSpace(s) ? "Enter the file path of the dictionary." :
+                !File.Exists(s) ? "File not found." : null
                 ).AddTo(Disposables);
             PresetFilePath.Subscribe(s => settingService.PresetFilePath = s);
         }
@@ -44,7 +44,7 @@ namespace Yomiage.GUI.ViewModels
         {
             var ofd = new OpenFileDialog()
             {
-                Filter = "プリセットファイル (.yvpc)|*.yvpc",
+                Filter = "Preset File (.yvpc)|*.yvpc",
                 InitialDirectory = this.configService.PresetDirectory,
             };
             if(ofd.ShowDialog() == true)
@@ -57,7 +57,7 @@ namespace Yomiage.GUI.ViewModels
         {
             var sfd = new SaveFileDialog()
             {
-                Filter = "プリセットファイル (.yvpc)|*.yvpc",
+                Filter = "Preset File (.yvpc)|*.yvpc",
                 InitialDirectory = this.configService.PresetDirectory,
             };
             if (sfd.ShowDialog() == true)

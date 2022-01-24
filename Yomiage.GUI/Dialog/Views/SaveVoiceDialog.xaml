@@ -11,7 +11,7 @@
         <Label DockPanel.Dock="Top" MinWidth="600" Height="0"/>
 
         <DockPanel DockPanel.Dock="Bottom" Margin="3">
-            <Button Command="{Binding CancelCommand}" DockPanel.Dock="Right">キャンセル</Button>
+            <Button Command="{Binding CancelCommand}" DockPanel.Dock="Right">Cancel</Button>
             <Button Command="{Binding OkCommand}" DockPanel.Dock="Right" Margin="0,0,3,0">OK</Button>
             <Label/>
         </DockPanel>

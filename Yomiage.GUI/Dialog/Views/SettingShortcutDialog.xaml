@@ -30,7 +30,7 @@
                 Width="200"
                 Binding="{Binding Target}"
                 IsReadOnly="True"
-                Header="操作対象" />
+                Header="Operation" />
         </DataGrid.Columns>
         <DataGrid.Style>
             <Style BasedOn="{StaticResource MahApps.Styles.DataGrid}" TargetType="{x:Type DataGrid}">

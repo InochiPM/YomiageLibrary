@@ -111,27 +111,27 @@ namespace Yomiage.GUI.Models
                 directoryNum += 1;
             }
             loadCount = 1;
-            LoadEngine(Path.Combine(Directory.GetCurrentDirectory(), "Engine"), $"( {loadCount} / {(directoryNum + 1)} )エンジンの読み込み。");
+            LoadEngine(Path.Combine(Directory.GetCurrentDirectory(), "Engine"), $"Loading ( {loadCount} / {(directoryNum + 1)} ) engine.");
             loadCount += 1;
-            LoadEngine(EngineDirectory, $"( {loadCount} / {(directoryNum + 1)} )エンジンの読み込み。");
+            LoadEngine(EngineDirectory, $"Loading ( {loadCount} / {(directoryNum + 1)} ) engine.");
             loadCount += 1;
-            LoadLibrary(Path.Combine(Directory.GetCurrentDirectory(), "Library"), $"( {loadCount} / {(directoryNum + 1)} )ライブラリの読み込み。");
+            LoadLibrary(Path.Combine(Directory.GetCurrentDirectory(), "Library"), $"Loading ( {loadCount} / {(directoryNum + 1)} ) library.");
             loadCount += 1;
-            LoadLibrary(LibraryDirectory, $"( {loadCount} / {(directoryNum + 1)} )ライブラリの読み込み。");
+            LoadLibrary(LibraryDirectory, $"Loading ( {loadCount} / {(directoryNum + 1)} ) library.");
             loadCount += 1;
             if (!string.IsNullOrWhiteSpace(appConfig?.EngineDirectory))
             {
-                LoadEngine(appConfig.EngineDirectory, $"( {loadCount} / {(directoryNum + 1)} )エンジンの読み込み。");
+                LoadEngine(appConfig.EngineDirectory, $"Loading ( {loadCount} / {(directoryNum + 1)} ) engine.");
                 loadCount += 1;
             }
             if (!string.IsNullOrWhiteSpace(appConfig?.LibraryDirectory))
             {
-                LoadLibrary(appConfig.LibraryDirectory, $"( {loadCount} / {(directoryNum + 1)} )ライブラリの読み込み。");
+                LoadLibrary(appConfig.LibraryDirectory, $"Loading ( {loadCount} / {(directoryNum + 1)} )library.");
                 loadCount += 1;
             }
-            submitState($"( {loadCount} / {(directoryNum + 1)} )プリセットの初期化・読み込み。", 0.9);
+            submitState($"Reset ( {loadCount} / {(directoryNum + 1)} ) and load preset.", 0.9);
             InitPreset();
-            submitState($"( {loadCount} / {(directoryNum + 1)} )プリセットの初期化・読み込み。", 0.95);
+            submitState($"Reset ( {loadCount} / {(directoryNum + 1)} ) and load preset.", 0.95);
             LoadPresets();
             this.submitState = null;
         }
@@ -152,10 +152,10 @@ namespace Yomiage.GUI.Models
                     var config = JsonUtil.Deserialize<EngineConfig>(f);
                     if (config == null)
                     {
-                        AppLog.Info("ファイルの読み込みに失敗しました : " + f);
+                        AppLog.Info("Failed to load the file: " + f);
                     }
                     if (string.IsNullOrWhiteSpace(config?.Key) || voiceEngineService.AllEngines.Any(e => e.EngineConfig.Key == config?.Key)) { continue; }
-                    AppLog.Info("エンジンのロード開始 : " + f);
+                    AppLog.Info("Engine import start: " + f);
                     var directory = Path.GetDirectoryName(f);
 
                     var settings = new EngineSettings();
@@ -236,10 +236,10 @@ namespace Yomiage.GUI.Models
                     var config = JsonUtil.Deserialize<LibraryConfig>(f);
                     if (config == null)
                     {
-                        AppLog.Info("ファイルの読み込みに失敗しました : " + f);
+                        AppLog.Info("Failed to load the file : " + f);
                     }
                     if (string.IsNullOrWhiteSpace(config?.Key) || voiceLibraryService.AllLibrarys.Any(l => l.LibraryConfig.Key == config?.Key)) { continue; }
-                    AppLog.Info("ライブラリのロード開始 : " + f);
+                    AppLog.Info("Library import start : " + f);
                     var directory = Path.GetDirectoryName(f);
 
                     var settings = LoadLibrarySettings(Path.Combine(directory, "library.settings.json"));
@@ -494,7 +494,7 @@ namespace Yomiage.GUI.Models
 
         private string CheckFilePath()
         {
-            if (string.IsNullOrWhiteSpace(this.settingService.PresetFilePath) || this.settingService.PresetFilePath == "未登録")
+            if (string.IsNullOrWhiteSpace(this.settingService.PresetFilePath) || this.settingService.PresetFilePath == "Unregistered")
             {
                 this.settingService.PresetFilePath = Path.Combine(this.PresetDirectory,
                     Path.GetFileNameWithoutExtension(Process.GetCurrentProcess().MainModule.FileName) + ".yvpc");

@@ -194,9 +194,9 @@ namespace Yomiage.GUI
                             }
                         }
                     }
-                    var filterString = "テキスト文書 | *.txt";
+                    var filterString = "Text File| *.txt";
                     filters.ForEach(f => filterString += "|" + f.Item1);
-                    filterString += "|すべてのファイル|*.*";
+                    filterString += "|All Files|*.*";
                     var ofd = new OpenFileDialog() { Filter = filterString };
                     if (ofd.ShowDialog() != true) { return; }
                     (string, IVoiceEngine) selectedFilter = (null, null);
@@ -261,7 +261,7 @@ namespace Yomiage.GUI
                     {
                         var sfd = new SaveFileDialog()
                         {
-                            Filter = "設定ファイル(*.ysettings)|*.ysettings",
+                            Filter = "Setting File(*.ysettings)|*.ysettings",
                         };
                         if (sfd.ShowDialog() == true)
                         {
@@ -273,7 +273,7 @@ namespace Yomiage.GUI
                     {
                         var ofd = new OpenFileDialog()
                         {
-                            Filter = "設定ファイル(*.ysettings)|*.ysettings",
+                            Filter = "Settings File(*.ysettings)|*.ysettings",
                         };
                         if (ofd.ShowDialog() == true)
                         {
@@ -288,8 +288,8 @@ namespace Yomiage.GUI
         private void InitializeSettingAction()
         {
             var result = System.Windows.MessageBox.Show(
-                "リセットされる内容\n・環境設定\n・プロジェクト設定（一部除く）\n・音声保存設定\n・レイアウト（一部除く）\n・Master Control\n\nリセットされない内容\n・フレーズ、単語、記号辞書\n・ボイスプリセット\n・エンジン、音声ライブラリ",
-                "設定を全てリセットします",
+                "Contents to reset\n・Preferences\n・Project settings (some excluded)\n・Audio storage settings\n・Layout (excluding some parts)\n・Master Control\n\nContents not reset\n・Phrase, word, and symbol dictionary\n・Voice Presets\n・Engine, voice library",
+                "Reset all settings.",
                 System.Windows.MessageBoxButton.OKCancel);
 
             if (result == System.Windows.MessageBoxResult.OK)

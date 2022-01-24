@@ -37,7 +37,7 @@ namespace Yomiage.GUI.ViewModels
         {
             using var cofd = new CommonOpenFileDialog()
             {
-                Title = "音声保存先フォルダの選択",
+                Title = "Select a folder to save the audio.",
                 // フォルダ選択モードにする
                 IsFolderPicker = true,
             };
@@ -49,24 +49,24 @@ namespace Yomiage.GUI.ViewModels
         {
             if (!string.IsNullOrWhiteSpace(Rule.Value))
             {
-                var result = MessageBox.Show("命名規則を書き換えます。", "確認", MessageBoxButton.OKCancel);
+                var result = MessageBox.Show("Write a new naming convention.", "Warning", MessageBoxButton.OKCancel);
                 if(result != MessageBoxResult.OK) { return; }
             }
             switch (param)
             {
-                case "連番_入力文":
+                case "Sequential number_input text":
                     Rule.Value = "{Number}_{Text}";
                     break;
-                case "日時_連番_入力文":
+                case "Date and time_sequential number_input text":
                     Rule.Value = "{yyMMdd_HHmmss}_{Number}_{Text}";
                     break;
-                case "日時_連番_キャラ名_入力文":
+                case "Date and time_sequential number_character name_input text":
                     Rule.Value = "{yyMMdd_HHmmss}_{Number}_{VoicePreset}_{Text}";
                     break;
-                case "キャラ名\\日時_連番_入力文":
+                case "character name\\date_sequential number_input text":
                     Rule.Value = "{VoicePreset}\\{yyMMdd_HHmmss}_{Number}_{Text}";
                     break;
-                case "日付\\時刻_連番_キャラ名_入力文":
+                case "Date and time\\sequential number_character name_input text":
                     Rule.Value = "{yyyyMMdd}\\{HHmmss}_{Number}_{VoicePreset}_{Text}";
                     break;
             }

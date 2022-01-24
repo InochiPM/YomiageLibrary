@@ -83,7 +83,7 @@ namespace Yomiage.GUI.ViewModels
             this.wordDictionaryService = wordDictionaryService;
             this.pauseDictionaryService = pauseDictionaryService;
 
-            Title = new ReactivePropertySlim<string>("新規").AddTo(Disposables);
+            Title = new ReactivePropertySlim<string>("New").AddTo(Disposables);
             TitleWithDirty = new ReactivePropertySlim<string>().AddTo(Disposables);
             FilePath = new ReactivePropertySlim<string>(null).AddTo(Disposables);
             FilePath.Subscribe(FileNameChanged).AddTo(Disposables);
@@ -185,7 +185,7 @@ namespace Yomiage.GUI.ViewModels
             else
             {
                 // 変更がある場合は保存するかきく
-                var result = MessageBox.Show("テキストが保存されていません。\n保存しますか？", "テキストを閉じる", MessageBoxButton.YesNoCancel);
+                var result = MessageBox.Show("The text has not been saved.\nDo you wish to save?", "Warning", MessageBoxButton.YesNoCancel);
                 switch (result)
                 {
                     case MessageBoxResult.Yes:
@@ -400,7 +400,7 @@ namespace Yomiage.GUI.ViewModels
         public bool SaveAs()
         {
             Content.Value = GetContent();
-            var sfd = new SaveFileDialog() { Filter = "テキスト文書|*.txt" };
+            var sfd = new SaveFileDialog() { Filter = "Text Document|*.txt" };
             if (sfd.ShowDialog() != true) { return false; }
             FilePath.Value = sfd.FileName;
             Title.Value = Path.GetFileNameWithoutExtension(sfd.FileName);
