@@ -15,7 +15,7 @@
 
         <!-- OK, Cancel -->
         <DockPanel DockPanel.Dock="Bottom" Margin="3">
-            <Button DockPanel.Dock="Right" Command="{Binding CancelCommand}">キャンセル</Button>
+            <Button DockPanel.Dock="Right" Command="{Binding CancelCommand}" Content="Cancel"/>
             <Button DockPanel.Dock="Right" Command="{Binding OkCommand}" Margin="0,0,3,0">OK</Button>
             <Label/>
         </DockPanel>

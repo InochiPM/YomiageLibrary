@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         SizeToContent="WidthAndHeight"
                  Loaded="MetroWindow_Loaded"
-        Title="Read/Write Editing">
+        Title="読み編集">
     <StackPanel Margin="3">
         <!-- サイズ調整用 -->
         <Label Width="450" Height="0"/>
@@ -19,7 +19,7 @@
 
         <!-- OK Cancel -->
         <DockPanel>
-            <Button Click="Button_Cancel" DockPanel.Dock="Right" Width="80" Margin="3" Content="Cancel"/>
+            <Button Click="Button_Cancel" DockPanel.Dock="Right" Width="80" Margin="3">キャンセル</Button>
             <Button Click="Button_Ok" DockPanel.Dock="Right" Width="80" Margin="3">OK</Button>
             <Label/>
         </DockPanel>

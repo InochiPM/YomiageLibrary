@@ -11,11 +11,11 @@ namespace Yomiage.GUI.Data
         public static string Num1000 { get; }
         public static string[] Prioritys { get; } = new string[5]
         {
-            "1.Highest",
-            "2.High",
-            "3.Mid",
-            "4.Low",
-            "5.Lowest",
+            "1.最高",
+            "2.高い",
+            "3.標準",
+            "4.低い",
+            "5.最低",
         };
 
         static ConstData()
@@ -28,6 +28,6 @@ namespace Yomiage.GUI.Data
             Num1000 = temp;
         }
 
-        public static string AppName { get; } = "UNI-COE";
+        public static string AppName { get; } = "ユニコエ";
     }
 }

@@ -59,7 +59,7 @@ namespace Yomiage.GUI
                 string myProcessName = Process.GetCurrentProcess().ProcessName;
                 if (Process.GetProcessesByName(myProcessName).Length > 1)
                 {
-                    var result = MessageBox.Show(myProcessName + " Is already open.\nIt's not recommended to have more than one open at a time\nContinue?", "Confirm", MessageBoxButton.YesNo);
+                    var result = MessageBox.Show(myProcessName + " はすでに起動しています。\n多重起動での動作は保障されません。それでも起動しますか？", "確認", MessageBoxButton.YesNo);
                     if (result == MessageBoxResult.No)
                     {
                         this.Shutdown();

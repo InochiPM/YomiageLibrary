@@ -64,7 +64,7 @@
                     </Button>
 
                     <cont:MySlider
-                        Title="音量"
+                        Title="Volume"
                         Grid.Row="2"
                         Grid.Column="0"
                         DefaultValue="1"
@@ -74,11 +74,11 @@
                         SmallChange="0.01"
                         StringFormat="0.00"
                         TickFrequency="0.1"
-                        Unit="[倍]"
+                        Unit="Time"
                         Value="{Binding SettingService.MasterVolume.Value, Mode=TwoWay}" />
 
                     <cont:MySlider
-                        Title="話速"
+                        Title="Speed"
                         Grid.Row="2"
                         Grid.Column="1"
                         DefaultValue="1"
@@ -88,11 +88,11 @@
                         SmallChange="0.01"
                         StringFormat="0.00"
                         TickFrequency="0.1"
-                        Unit="[倍]"
+                        Unit="Time"
                         Value="{Binding SettingService.MasterSpeed.Value, Mode=TwoWay}" />
 
                     <cont:MySlider
-                        Title="高さ"
+                        Title="Pitch"
                         Grid.Row="2"
                         Grid.Column="2"
                         DefaultValue="1"
@@ -102,11 +102,11 @@
                         SmallChange="0.01"
                         StringFormat="0.00"
                         TickFrequency="0.1"
-                        Unit="[倍]"
+                        Unit="Time"
                         Value="{Binding SettingService.MasterPitch.Value, Mode=TwoWay}" />
 
                     <cont:MySlider
-                        Title="抑揚"
+                        Title="Innotation"
                         Grid.Row="2"
                         Grid.Column="3"
                         DefaultValue="1"
@@ -116,7 +116,7 @@
                         SmallChange="0.01"
                         StringFormat="0.00"
                         TickFrequency="0.1"
-                        Unit="[倍]"
+                        Unit="Time"
                         Value="{Binding SettingService.MasterEmphasis.Value, Mode=TwoWay}" />
 
                 </Grid>
@@ -160,7 +160,7 @@
                     </Button>
 
                     <cont:MySlider
-                        Title="短ポーズ"
+                        Title="Short"
                         Grid.Row="2"
                         Grid.Column="0"
                         DefaultValue="150"
@@ -170,11 +170,11 @@
                         SmallChange="1"
                         StringFormat="0"
                         TickFrequency="10"
-                        Unit="[ﾐﾘ秒]"
+                        Unit="MS"
                         Value="{Binding SettingService.MasterShortPause.Value, Mode=TwoWay}" />
 
                     <cont:MySlider
-                        Title="長ポーズ"
+                        Title="Long"
                         Grid.Row="2"
                         Grid.Column="1"
                         DefaultValue="370"
@@ -184,11 +184,11 @@
                         SmallChange="1"
                         StringFormat="0"
                         TickFrequency="10"
-                        Unit="[ﾐﾘ秒]"
+                        Unit="MS"
                         Value="{Binding SettingService.MasterLongPause.Value, Mode=TwoWay}" />
 
                     <cont:MySlider
-                        Title="文末ポーズ"
+                        Title="Ending"
                         Grid.Row="2"
                         Grid.Column="2"
                         DefaultValue="800"
@@ -198,7 +198,7 @@
                         SmallChange="1"
                         StringFormat="0"
                         TickFrequency="10"
-                        Unit="[ﾐﾘ秒]"
+                        Unit="MS"
                         Value="{Binding SettingService.MasterEndPause.Value, Mode=TwoWay}" />
 
                 </Grid>

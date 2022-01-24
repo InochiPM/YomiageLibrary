@@ -194,9 +194,9 @@ namespace Yomiage.GUI
                             }
                         }
                     }
-                    var filterString = "Text Document | *.txt";
+                    var filterString = "テキスト文書 | *.txt";
                     filters.ForEach(f => filterString += "|" + f.Item1);
-                    filterString += "|All files|*.*";
+                    filterString += "|すべてのファイル|*.*";
                     var ofd = new OpenFileDialog() { Filter = filterString };
                     if (ofd.ShowDialog() != true) { return; }
                     (string, IVoiceEngine) selectedFilter = (null, null);
@@ -231,7 +231,7 @@ namespace Yomiage.GUI
                 case "Copy":
                     if (this.VoicePresetService.SelectedPreset.Value != null)
                     {
-                        var result = MessageBox.Show(this.VoicePresetService.SelectedPreset.Value.Name + " Will be copied, are you sure?", "Warning", MessageBoxButton.YesNo);
+                        var result = MessageBox.Show(this.VoicePresetService.SelectedPreset.Value.Name + " のコピーを作成してよろしいですか？", "確認", MessageBoxButton.YesNo);
                         if (result == MessageBoxResult.Yes)
                         {
                             this.VoicePresetService.Copy(this.VoicePresetService.SelectedPreset.Value);
@@ -243,7 +243,7 @@ namespace Yomiage.GUI
                     if (this.VoicePresetService.SelectedPreset.Value != null &&
                         this.VoicePresetService.SelectedPreset.Value.Type == PresetType.User)
                     {
-                        var result = MessageBox.Show(this.VoicePresetService.SelectedPreset.Value.Name + " Will be deleted, are you sure?", "Warning", MessageBoxButton.YesNo);
+                        var result = MessageBox.Show(this.VoicePresetService.SelectedPreset.Value.Name + " を削除してよろしいですか？", "確認", MessageBoxButton.YesNo);
                         if (result == MessageBoxResult.Yes)
                         {
                             this.VoicePresetService.Remove(this.VoicePresetService.SelectedPreset.Value);
@@ -261,7 +261,7 @@ namespace Yomiage.GUI
                     {
                         var sfd = new SaveFileDialog()
                         {
-                            Filter = "Settings File(*.ysettings)|*.ysettings",
+                            Filter = "設定ファイル(*.ysettings)|*.ysettings",
                         };
                         if (sfd.ShowDialog() == true)
                         {
@@ -273,7 +273,7 @@ namespace Yomiage.GUI
                     {
                         var ofd = new OpenFileDialog()
                         {
-                            Filter = "Settings File(*.ysettings)|*.ysettings",
+                            Filter = "設定ファイル(*.ysettings)|*.ysettings",
                         };
                         if (ofd.ShowDialog() == true)
                         {
@@ -288,7 +288,7 @@ namespace Yomiage.GUI
         private void InitializeSettingAction()
         {
             var result = System.Windows.MessageBox.Show(
-                "リセットされる内容\n・環境設定\n・プロジェクト設定（一部除く）\n・音声保存設定\n・レイアウト（一部除く）\n・マスターコントロール\n\nリセットされない内容\n・フレーズ、単語、記号辞書\n・ボイスプリセット\n・エンジン、音声ライブラリ",
+                "リセットされる内容\n・環境設定\n・プロジェクト設定（一部除く）\n・音声保存設定\n・レイアウト（一部除く）\n・Master Control\n\nリセットされない内容\n・フレーズ、単語、記号辞書\n・ボイスプリセット\n・エンジン、音声ライブラリ",
                 "設定を全てリセットします",
                 System.Windows.MessageBoxButton.OKCancel);
 

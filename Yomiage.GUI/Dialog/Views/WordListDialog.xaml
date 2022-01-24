@@ -24,7 +24,7 @@
             <TextBox         Text="{Binding SearchText.Value, UpdateSourceTrigger=PropertyChanged}"
                              mah:TextBoxHelper.ClearTextButton="True"
                              mah:TextBoxHelper.UseFloatingWatermark="True"
-                             mah:TextBoxHelper.Watermark="Search... 半角スペースで区切り">
+                             mah:TextBoxHelper.Watermark="Search... Seperated by spaces.">
                 <TextBox.Style>
                     <Style BasedOn="{StaticResource MahApps.Styles.TextBox.Search}" TargetType="{x:Type TextBox}">
                         <Style.Triggers>
@@ -42,27 +42,27 @@
                 Visibility="{Binding IsChecked, ElementName=detail, Converter={StaticResource BooleanToVisibilityConverter}}">
             <StackPanel Margin="20">
                 <StackPanel Orientation="Horizontal">
-                    <Label Width="120">検索対象</Label>
-                    <RadioButton IsChecked="{Binding TargetAll.Value}" Width="120">すべて</RadioButton>
-                    <RadioButton IsChecked="{Binding TargetText.Value}" Width="120">見出し</RadioButton>
-                    <RadioButton IsChecked="{Binding TargetYomi.Value}" Width="120">読み</RadioButton>
+                    <Label Width="120">Search Target</Label>
+                    <RadioButton IsChecked="{Binding TargetAll.Value}" Width="120">All</RadioButton>
+                    <RadioButton IsChecked="{Binding TargetText.Value}" Width="120">Title</RadioButton>
+                    <RadioButton IsChecked="{Binding TargetYomi.Value}" Width="120">Reading</RadioButton>
                 </StackPanel>
                 <Separator Margin="0,5,0,5"/>
                 <StackPanel Orientation="Horizontal">
-                    <Label Width="120">一致箇所</Label>
-                    <RadioButton IsChecked="{Binding MatchTypeStart.Value}" Width="120">前方一致</RadioButton>
-                    <RadioButton IsChecked="{Binding MatchTypeAny.Value}" x:Name="partRadio" Width="120">部分一致</RadioButton>
-                    <RadioButton IsChecked="{Binding MatchTypeEnd.Value}" Width="120">後方一致</RadioButton>
+                    <Label Width="120">Matching</Label>
+                    <RadioButton IsChecked="{Binding MatchTypeStart.Value}" Width="120">Beginning</RadioButton>
+                    <RadioButton IsChecked="{Binding MatchTypeAny.Value}" x:Name="partRadio" Width="120">Partial</RadioButton>
+                    <RadioButton IsChecked="{Binding MatchTypeEnd.Value}" Width="120">Ending</RadioButton>
                 </StackPanel>
                 <Separator Margin="0,5,0,5"/>
                 <StackPanel Orientation="Horizontal" IsEnabled="{Binding IsChecked, ElementName=partRadio}">
-                    <Label Width="120">AND / OR</Label>
-                    <RadioButton IsChecked="{Binding MatchTypeAnd.Value}" Width="120">AND(かつ)</RadioButton>
-                    <RadioButton IsChecked="{Binding MatchTypeOr.Value}" Width="120">OR(または)</RadioButton>
+                    <Label Width="120">AND/OR</Label>
+                    <RadioButton IsChecked="{Binding MatchTypeAnd.Value}" Width="120">AND</RadioButton>
+                    <RadioButton IsChecked="{Binding MatchTypeOr.Value}" Width="120">OR</RadioButton>
                 </StackPanel>
                 <Separator Margin="0,5,0,5"/>
                 <StackPanel Orientation="Horizontal">
-                    <Label Width="120">１ページの表示件数</Label>
+                    <Label Width="120">No. Page Views</Label>
                     <mah:NumericUpDown Width="120" UpDownButtonsWidth="18"
                                        Minimum="1" Maximum="60000" Value="{Binding ListSize.Value}"
                                        Padding="10,0,0,0"
@@ -77,19 +77,19 @@
             <Button Command="{Binding OkCommand}" DockPanel.Dock="Right" Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Kind="RegularExit" Margin="0,0,4,0"/>
-                    <TextBlock VerticalAlignment="Bottom">閉じる</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom">Close</TextBlock>
                 </DockPanel>
             </Button>
             <Button Command="{Binding DeleteCommand}" DockPanel.Dock="Right" Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconMaterial Kind="TrashCanOutline" Margin="0,0,4,0"/>
-                    <TextBlock VerticalAlignment="Bottom">削除</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom">Delete</TextBlock>
                 </DockPanel>
             </Button>
             <Button Command="{Binding EditCommand}" DockPanel.Dock="Right" Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Kind="RegularEditAlt" Margin="0,0,4,0"/>
-                    <TextBlock VerticalAlignment="Bottom">編集</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom">Edit</TextBlock>
                 </DockPanel>
             </Button>
             <Label/>
@@ -147,13 +147,13 @@
                 <Label DockPanel.Dock="Left" Content=" / " VerticalAlignment="Center"/>
                 <Label DockPanel.Dock="Left" Width="100" Content="{Binding PageSize.Value}" VerticalAlignment="Center"/>
 
-                <Label DockPanel.Dock="Right">件目を表示</Label>
+                <Label DockPanel.Dock="Right">Frist</Label>
                 <Label DockPanel.Dock="Right" Content="{Binding EndIndex.Value}"/>
                 <Label DockPanel.Dock="Right">-</Label>
                 <Label DockPanel.Dock="Right" Content="{Binding StartIndex.Value}"/>
-                <Label DockPanel.Dock="Right">件ヒット</Label>
+                <Label DockPanel.Dock="Right">Hits</Label>
                 <Label DockPanel.Dock="Right" Content="{Binding FilterdSize.Value}"/>
-                <Label DockPanel.Dock="Right">件中</Label>
+                <Label DockPanel.Dock="Right">Item</Label>
                 <Label DockPanel.Dock="Right" Content="{Binding TotalSize.Value}"/>
                 <Label/>
             </DockPanel>
@@ -162,9 +162,9 @@
             <ListView Margin="3" SelectionMode="Single" ItemsSource="{Binding WordList}" SelectedItem="{Binding Selected.Value}">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="見出し" DisplayMemberBinding="{Binding OriginalText}" Width="250"/>
-                        <GridViewColumn Header="読み" DisplayMemberBinding="{Binding Yomi}" Width="250"/>
-                        <GridViewColumn Header="優先度" DisplayMemberBinding="{Binding Priority}" Width="100"/>
+                        <GridViewColumn Header="Title" DisplayMemberBinding="{Binding OriginalText}" Width="250"/>
+                        <GridViewColumn Header="Reading" DisplayMemberBinding="{Binding Yomi}" Width="250"/>
+                        <GridViewColumn Header="Priority" DisplayMemberBinding="{Binding Priority}" Width="100"/>
                     </GridView>
                 </ListView.View>
             </ListView>

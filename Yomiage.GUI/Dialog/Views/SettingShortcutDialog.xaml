@@ -20,12 +20,12 @@
                 Width="*"
                 Binding="{Binding Operation}"
                 IsReadOnly="True"
-                Header="操作内容" />
+                Header="Function" />
             <DataGridTextColumn
                 Width="200"
                 Binding="{Binding Key}"
                 IsReadOnly="True"
-                Header="ショートカットキー" />
+                Header="Shorcut Key" />
             <DataGridTextColumn
                 Width="200"
                 Binding="{Binding Target}"

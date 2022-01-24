@@ -95,13 +95,13 @@
             <Button Click="Button_Click" Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularSkipPreviousCircle" />
-                    <TextBlock VerticalAlignment="Bottom">Skip Back</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom"><Run Language="ja-jp" Text="Skip"/></TextBlock>
                 </DockPanel>
             </Button>
             <Button Click="Button_Click_1" Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularSkipNextCircle" />
-                    <TextBlock VerticalAlignment="Bottom">Skip Forward</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom"><Run Language="ja-jp" Text="Skip"/></TextBlock>
                 </DockPanel>
             </Button>
             <Button

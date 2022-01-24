@@ -32,10 +32,10 @@
         <!--  環境設定一覧  -->
         <ScrollViewer>
             <StackPanel Margin="6">
-                <GroupBox Header="テキスト入力欄の書式">
+                <GroupBox Header="Text Input Formatting">
                     <StackPanel Margin="10">
                         <StackPanel Orientation="Horizontal">
-                            <Label Width="80">フォント名</Label>
+                            <Label Width="80">Font Name</Label>
                             <ComboBox
                                 Width="250"
                                 ItemsSource="{Binding Fonts}"
@@ -50,10 +50,10 @@
                                     </DataTemplate>
                                 </ComboBox.ItemTemplate>
                             </ComboBox>
-                            <Label Margin="10,0,0,0" FontFamily="{Binding SettingService.TextFontName}">ことのは コトノハ 琴葉 123</Label>
+                            <Label Margin="10,0,0,0" FontFamily="{Binding SettingService.TextFontName}">ABC abc ことのは コトノハ 琴葉 123</Label>
                         </StackPanel>
                         <StackPanel Margin="0,5,0,0" Orientation="Horizontal">
-                            <Label Width="80">フォントサイズ</Label>
+                            <Label Width="80">Font Size</Label>
                             <ComboBox Width="250" SelectedItem="{Binding SettingService.TextFontSize}">
                                 <ComboBox.Items>
                                     <sys:Int32>8</sys:Int32>
@@ -78,25 +78,25 @@
                                 Margin="10,0,0,0"
                                 FontFamily="{Binding SettingService.TextFontName}"
                                 FontSize="{Binding SettingService.TextFontSize}">
-                                あ
+                                Aa あぁ
                             </Label>
                         </StackPanel>
                         <!--<CheckBox IsChecked="{Binding SettingService.TextWordWrap}" Margin="6,10,0,5">右端で折り返す</CheckBox>-->
                     </StackPanel>
                 </GroupBox>
-                <GroupBox Margin="0,10,0,0" Header="音声合成">
-                    <CheckBox Margin="16,10,0,10" IsChecked="{Binding SettingService.ExpandEffectRange.Value}">音声効果の入力範囲を拡張する</CheckBox>
+                <GroupBox Margin="0,10,0,0" Header="Speech Synthesis">
+                    <CheckBox Margin="16,10,0,10" IsChecked="{Binding SettingService.ExpandEffectRange.Value}">Extend the input range of voice effects</CheckBox>
                 </GroupBox>
                 <!--<GroupBox Header="音声保存" Margin="0,10,0,0">
                     <CheckBox IsChecked="{Binding SettingService.ShowDialogWithSave}" Margin="16,10,0,10">音声保存時に毎回設定を表示する</CheckBox>
                 </GroupBox>-->
-                <GroupBox Margin="0,10,0,0" Header="オーディオデバイス">
+                <GroupBox Margin="0,10,0,0" Header="Audio Device">
                     <StackPanel Margin="10">
                         <CheckBox
                             x:Name="deviceSelect"
                             Margin="6,0,0,5"
                             IsChecked="{Binding SettingService.AudioDefault}">
-                            出力デバイスを指定する
+                            Specify the output device
                         </CheckBox>
                         <ComboBox
                             Margin="6,3,0,0"
@@ -119,32 +119,32 @@
                         <CheckBox IsChecked="{Binding SettingService.ShowToolTip}" Margin="6,10,0,5" IsEnabled="False">ツールチップを表示する</CheckBox>
                     </StackPanel>
                 </GroupBox>-->
-                <GroupBox Margin="0,10,0,0" Header="ウィンドウ">
+                <GroupBox Margin="0,10,0,0" Header="Window">
                     <StackPanel Margin="10">
                         <StackPanel Orientation="Horizontal">
-                            <Label Width="100">テーマ</Label>
+                            <Label Width="100">Theme</Label>
                             <ComboBox Width="120" SelectedIndex="{Binding ThemeIndex.Value}">
                                 <ComboBox.Items>
-                                    <sys:String>システム</sys:String>
-                                    <sys:String>ライト</sys:String>
-                                    <sys:String>ダーク</sys:String>
-                                    <sys:String>あかねダーク</sys:String>
-                                    <sys:String>ずんだライト</sys:String>
-                                    <sys:String>ゆかりダーク</sys:String>
-                                    <sys:String>あかりダーク</sys:String>
-                                    <sys:String>きりたんぽライト</sys:String>
-                                    <sys:String>マキライト</sys:String>
-                                    <sys:String>arial ライト</sys:String>
-                                    <sys:String>myriad ダーク</sys:String>
+                                    <sys:String>System</sys:String>
+                                    <sys:String>Light</sys:String>
+                                    <sys:String>Dark</sys:String>
+                                    <sys:String>Akane</sys:String>
+                                    <sys:String>Zunda</sys:String>
+                                    <sys:String>Yukari</sys:String>
+                                    <sys:String>Akari</sys:String>
+                                    <sys:String>Kiritan</sys:String>
+                                    <sys:String>Maki</sys:String>
+                                    <sys:String>Arial</sys:String>
+                                    <sys:String>Myriad</sys:String>
                                 </ComboBox.Items>
                             </ComboBox>
                         </StackPanel>
                         <StackPanel Margin="0,5,0,0" Orientation="Horizontal">
-                            <Label Width="170">ボイスリストのアイコンサイズ</Label>
+                            <Label Width="170">Voice list icon size</Label>
                             <ComboBox Width="50" SelectedItem="{Binding SettingService.IconSize}">
                                 <ComboBox.Items>
-                                    <sys:String>小</sys:String>
-                                    <sys:String>大</sys:String>
+                                    <sys:String>Small</sys:String>
+                                    <sys:String>Large</sys:String>
                                 </ComboBox.Items>
                             </ComboBox>
                         </StackPanel>
