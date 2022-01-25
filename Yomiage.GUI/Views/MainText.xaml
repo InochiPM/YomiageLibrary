@@ -95,13 +95,13 @@
             <Button Click="Button_Click" Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularSkipPreviousCircle" />
-                    <TextBlock VerticalAlignment="Bottom"><Run Language="ja-jp" Text="Skip"/></TextBlock>
+                    <TextBlock VerticalAlignment="Bottom"><Run Language="ja-jp" Text="Start"/></TextBlock>
                 </DockPanel>
             </Button>
             <Button Click="Button_Click_1" Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Margin="0,0,4,0" Kind="RegularSkipNextCircle" />
-                    <TextBlock VerticalAlignment="Bottom"><Run Language="ja-jp" Text="Skip"/></TextBlock>
+                    <TextBlock VerticalAlignment="Bottom"><Run Language="ja-jp" Text="End"/></TextBlock>
                 </DockPanel>
             </Button>
             <Button
@@ -110,7 +110,7 @@
                 Style="{StaticResource IconButton}">
                 <DockPanel>
                     <icon:PackIconBoxIcons Margin="0,0,6,0" Kind="RegularDownload" />
-                    <TextBlock VerticalAlignment="Bottom">Save Voice</TextBlock>
+                    <TextBlock VerticalAlignment="Bottom"><Run Language="ja-jp" Text="Save Audio"/></TextBlock>
                 </DockPanel>
             </Button>
             <Button

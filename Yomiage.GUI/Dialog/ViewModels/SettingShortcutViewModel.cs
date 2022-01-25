@@ -28,7 +28,7 @@ namespace Yomiage.GUI.Dialog.ViewModels
             Items.Add(new Item() { Operation = "Add Phrase", Key = "Shift + S", Target = "Phrase Editor" });
             Items.Add(new Item() { Operation = "Copy Phrase Editor Tab", Key = "Shift + C", Target = "Phrase Editor" });
 
-            Items.Add(new Item() { Operation = "Show Innotation", Key = "1", Target = "Phrase Editor" });
+            Items.Add(new Item() { Operation = "Show Intonation", Key = "1", Target = "Phrase Editor" });
             Items.Add(new Item() { Operation = "Show Parameter Screen 2", Key = "2", Target = "Phrase Editor" });
             Items.Add(new Item() { Operation = "Show Parameter Screen ３", Key = "3", Target = "Phrase Editor" });
             Items.Add(new Item() { Operation = "Show Parameter Screen ４", Key = "4", Target = "Phrase Editor" });

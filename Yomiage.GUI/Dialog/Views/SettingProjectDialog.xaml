@@ -25,22 +25,22 @@
             <LayoutRoot>
                 <LayoutPanel>
                     <LayoutDocumentPane>
-                        <LayoutDocument Title="　　ボイス　　" CanClose="False" CanFloat="False" CanMove="False">
+                        <LayoutDocument Title="　　Voice　　" CanClose="False" CanFloat="False" CanMove="False">
                             <ScrollViewer Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
                                 <view:SettingVoice/>
                             </ScrollViewer>
                         </LayoutDocument>
-                        <LayoutDocument Title="　　ユーザー辞書　　" CanClose="False" CanFloat="False" CanMove="False">
+                        <LayoutDocument Title="　　User Dictionary　　" CanClose="False" CanFloat="False" CanMove="False">
                             <ScrollViewer Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
                                 <view:SettingDictionary/>
                             </ScrollViewer>
                         </LayoutDocument>
-                        <LayoutDocument Title="　　音声合成　　" CanClose="False" CanFloat="False" CanMove="False">
+                        <LayoutDocument Title="　　Synthesis　　" CanClose="False" CanFloat="False" CanMove="False">
                             <ScrollViewer Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
                                 <view:SettingSynthe/>
                             </ScrollViewer>
                         </LayoutDocument>
-                        <LayoutDocument Title="　　音声ファイル保存　　" CanClose="False" CanFloat="False" CanMove="False">
+                        <LayoutDocument Title="　　Save Audio　　" CanClose="False" CanFloat="False" CanMove="False">
                             <ScrollViewer Background="{DynamicResource MahApps.Brushes.ThemeBackground}">
                                 <view:SettingSave/>
                             </ScrollViewer>

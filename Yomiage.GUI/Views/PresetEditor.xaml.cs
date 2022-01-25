@@ -20,9 +20,6 @@ namespace Yomiage.GUI.Views
     /// </summary>
     public partial class PresetEditor : UserControl
     {
-        public PresetEditor()
-        {
-            InitializeComponent();
-        }
+        public PresetEditor() => InitializeComponent();
     }
 }

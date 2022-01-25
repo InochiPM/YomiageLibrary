@@ -53,9 +53,9 @@
               MouseWheel="OnMouseWheel">
             <Grid.ContextMenu>
                 <ContextMenu>
-                    <MenuItem Header="デフォルト値を設定" Click="MenuItem_Click"/>
-                    <MenuItem Header="設定値を削除" Click="MenuItem_Click"/>
-                    <MenuItem Header="全てのアクセント句の設定値を削除" Click="MenuItem_Click"/>
+                    <MenuItem Header="Reset" Click="MenuItem_Click"/>
+                    <MenuItem Header="Delete Settings" Click="MenuItem_Click"/>
+                    <MenuItem Header="Delete Accent Settings" Click="MenuItem_Click"/>
                 </ContextMenu>
             </Grid.ContextMenu>
         </Grid>

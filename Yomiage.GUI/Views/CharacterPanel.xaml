@@ -54,6 +54,6 @@
                 <ScaleTransform ScaleX="{Binding Scale.Value}" ScaleY="{Binding Scale.Value}"/>
             </Image.LayoutTransform>
         </Image>
-        <Label Content="{Binding PresetName.Value}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Label Content="{Binding PresetName.Value}" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" BorderBrush="White"/>
     </Grid>
 </UserControl>

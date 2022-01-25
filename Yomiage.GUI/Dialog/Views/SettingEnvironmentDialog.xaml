@@ -17,9 +17,7 @@
             <Button
                 Margin="3"
                 Command="{Binding CancelCommand}"
-                DockPanel.Dock="Right">
-                キャンセル
-            </Button>
+                DockPanel.Dock="Right" Content="Cancel"/>
             <Button
                 Margin="3"
                 Command="{Binding OkCommand}"

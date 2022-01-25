@@ -209,7 +209,7 @@ namespace Yomiage.GUI.Graph
 
         private void yomiIcon_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Action(Mora, "読み編集");
+            Action(Mora, "Read/Write Editing");
         }
     }
 }

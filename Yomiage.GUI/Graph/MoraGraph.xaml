@@ -16,44 +16,44 @@
                 <MenuItem
                     x:Name="yomi"
                     Click="MenuItem_Click"
-                    Header="読み編集" />
+                    Header="Read/Write Editor" />
                 <Separator />
                 <MenuItem
                     x:Name="join"
                     Click="MenuItem_Click"
-                    Header="アクセント句を結合" />
+                    Header="Combine Accent" />
                 <MenuItem
                     x:Name="split"
                     Click="MenuItem_Click"
-                    Header="アクセント句を分割" />
+                    Header="Split Accent" />
                 <Separator />
-                <MenuItem Header="無声化">
+                <MenuItem Header="Silence">
                     <MenuItem
                         x:Name="d"
                         Click="MenuItem_Click"
-                        Header="無声化する" />
+                        Header="Silent" />
                     <MenuItem
                         x:Name="v"
                         Click="MenuItem_Click"
-                        Header="無声化しない" />
+                        Header="Not Silent" />
                     <MenuItem
                         x:Name="dv"
                         Click="MenuItem_Click"
-                        Header="無声化を指定しない" />
+                        Header="Not Specified" />
                 </MenuItem>
                 <Separator />
                 <MenuItem
                     x:Name="addMora"
                     Click="MenuItem_Click"
-                    Header="長音を追加" />
+                    Header="Add Long Sound" />
                 <MenuItem
                     x:Name="removeMora"
                     Click="MenuItem_Click"
-                    Header="アクセントを削除" />
+                    Header="Delete Accent Mark" />
                 <MenuItem
                     x:Name="removeSection"
                     Click="MenuItem_Click"
-                    Header="アクセント句を削除" />
+                    Header="Remove Accent" />
             </ContextMenu>
         </Canvas.ContextMenu>
 

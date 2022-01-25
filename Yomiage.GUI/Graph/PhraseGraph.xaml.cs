@@ -2311,14 +2311,14 @@ namespace Yomiage.GUI.Graph
                 var def = selectedEffect.DefaultValue;
                 switch (item.Header)
                 {
-                    case "デフォルト値を設定":
+                    case "Reset":
                         SetValue(index.Item3, def);
                         break;
-                    case "設定値を削除":
+                    case "Delete Settings":
                         SetValue(index.Item3, null);
                         break;
-                    case "全てのアクセント句の設定値を削除":
-                        var result = MessageBox.Show("全てのアクセント句の設定値を削除してよろしいですか？", "確認", MessageBoxButton.OKCancel);
+                    case "Remove Accent Settings":
+                        var result = MessageBox.Show("Are you sure you want to\ndelete all accent settings?", "Warning", MessageBoxButton.OKCancel);
                         if (result != MessageBoxResult.OK) { return; }
                         foreach (var section in this.Phrase.Sections)
                         {
